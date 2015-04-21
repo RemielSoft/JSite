@@ -1,0 +1,114 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Default.master.cs" Inherits="JSVisaTrackingWebApplication.Default" %>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head runat="server">
+    <meta charset="utf-8">
+    <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="description" content="Metro UI CSS">
+    <meta name="author" content="Sergey Pimenov">
+    <meta name="keywords" content="windows 8, modern style, Metro UI, style, modern, css, framework">
+    <link href="css/modern.css" rel="stylesheet">
+    <link href="css/modern-responsive.css" rel="stylesheet">
+    <link href="css/site.css" rel="stylesheet" type="text/css">
+    <link href="js/google-code-prettify/prettify.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="javascript/jquery-1.9.0.min.js"></script>
+    <script type="text/javascript" src="javascript/jquery.mousewheel.min.js"></script>
+    <script type="text/javascript" src="javascript/moment.js"></script>
+    <script type="text/javascript" src="javascript/moment_langs.js"></script>
+    <script type="text/javascript" src="javascript/dropdown.js"></script>
+    <script type="text/javascript" src="javascript/accordion.js"></script>
+    <script type="text/javascript" src="javascript/buttonset.js"></script>
+    <script type="text/javascript" src="javascript/carousel.js"></script>
+    <script type="text/javascript" src="javascript/input-control.js"></script>
+    <script type="text/javascript" src="javascript/pagecontrol.js"></script>
+    <script type="text/javascript" src="javascript/rating.js"></script>
+    <script type="text/javascript" src="javascript/slider.js"></script>
+    <script type="text/javascript" src="javascript/tile-slider.js"></script>
+    <script type="text/javascript" src="javascript/tile-drag.js"></script>
+    <script type="text/javascript" src="javascript/calendar.js"></script>
+    <title>Metro UI CSS</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body class="metrouicss" <%--onload="prettyPrint()--%>">
+    <form id="form1" runat="server">
+   <%-- <div  class="page">--%>
+  <%-- <div id="hedder">
+   <div>
+       <asp:Image ID="Image1" runat="server" ImageUrl="~/images/Jetsavelogo.png" Width="125" Height="50" /></div>
+  
+   </div>
+       --%>
+            <div class="nav-bar">
+                <div class="nav-bar-inner padding5">
+                    <a href="Index.aspx"><span class="element brand">Jet Save</span></a> <span class="divider">
+                    </span>
+                    <ul class="menu">
+                        <li data-role="dropdown"><a>Consignment</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="AgentList.aspx">New Consignment</a></li>
+                                <li><a href="ViewConsignmentList.aspx">Consignment List</a></li>
+                                
+                            </ul>
+                        </li>
+                        <li data-role="dropdown"><a>Visa</a>
+                        <ul class="dropdown-menu">
+                                <li><a href="EmbassyFees.aspx">Embassy Fee</a></li>
+                                <li><a href="EmbassyMaster.aspx">Embassy Master</a></li>
+                                <li><a href="Miscelllaneous_charges.aspx">Miscleaneous Charges</a></li>
+                                 <li><a href="AddVisaForm.aspx">Add Visa Form</a></li>
+                                  <li><a href="ShowVisaForm.aspx">View Visa Form</a></li>
+                                  <li><a href="SearchVisaForm.aspx">Remove Visa Form</a></li>
+                                <li><a href="AddVisaInformation.aspx">Add Visa Information</a></li>
+                            </ul></li>
+                             <li data-role="dropdown"><a>Holiday</a>
+                        <ul class="dropdown-menu">
+                                <li><a href="CountryHolidayForm.aspx">Add New Holiday</a></li>
+                                <li><a href="HolidayList.aspx">View Holiday List</a></li>
+                        </ul></li>
+                         <li data-role="dropdown"><a>Agent</a>
+                        <ul class="dropdown-menu">
+                                <li><a href="AddAgent.aspx">Add Agent</a></li> 
+                                <li><a href="AgentEditUpdate.aspx">Manage Agent</a></li> 
+                                <li><a href="ListAgent.aspx">Agent List</a></li>
+                                <li><a href="AgentEmailList.aspx">Agent E-Mail List</a></li>                              
+                            </ul></li>
+                             <li data-role="dropdown"><a>Search</a>
+                        <ul class="dropdown-menu">
+                                <li><a href="#">Search</a></li>                                
+                            </ul></li>
+                            <li data-role="dropdown"><a>Admin</a>
+                        <ul class="dropdown-menu">
+                                <li><a href="#">New User</a></li>                                
+                            </ul></li>
+                        <li data-role="dropdown"><a>Utilities</a>
+                        <ul class="dropdown-menu">
+                                <li><a href="#">Receipt Generation</a></li>
+                                <li><a href="#">Export Data To Tally</a></li>
+                                <li><a href="#">Send Updation Mails</a></li>
+                                <li><a href="#">Invoice/Receipt Printing</a></li>
+                                <li><a href="#">Bill Register</a></li>
+                                <li><a href="#">Statement Of Account</a></li>
+                                <li><a href="#">Bank Statement</a></li>
+                                <li><a href="#">Update Consignment Status</a></li>
+                            </ul></li>
+                    </ul>
+                </div>
+            </div>
+       
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+        
+        <div class="nav-bar">
+            <div class="nav-bar-inner padding5">
+                <span class="element">
+                   &copy; Jetsave India Tours Pvt. Ltd, All Rights Reserved. <b>Developed By : </b><a class="fg-color-white" href="#">Remiel Soft</a>
+                </span>
+            </div>
+        </div>
+   
+ <%--   </div>--%>
+    </form>
+</body>
+</html>

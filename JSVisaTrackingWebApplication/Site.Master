@@ -1,0 +1,716 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="JSVisaTrackingWebApplication.SiteMaster" %>
+
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <meta name="viewport" content="width=device-width">
+    <title>Jet Save Tours</title>
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/css/Site.css" rel="stylesheet" />
+    <link href="~/css/flexslider.css" rel="stylesheet" media="screen" />
+    <script type="text/javascript" src="javascript/jquery-1.9.0.min.js"></script>
+    <script type="text/javascript" src="Scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="javascript/moment.js"></script>
+    <script type="text/javascript" src="javascript/calendar.js"></script>
+    <script type="text/javascript" src="Scripts/html5shiv.js"></script>
+    <script type="text/javascript" src="Scripts/respond.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#back-top").hide();
+            $(function () {
+                $(window).scroll(function () {
+                    if ($(this).scrollTop() > 100) {
+                        $('#back-top').fadeIn();
+                    } else {
+                        $('#back-top').fadeOut();
+                    }
+                });
+
+                $('#back-top a').click(function () {
+                    $('body,html').animate({
+                        scrollTop: 0
+                    }, 800);
+                    return false;
+                });
+            });
+        });
+
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#slider-1 > div:gt(0)").hide();
+            setInterval(function () {
+                $('#slider-1 > div:first')
+                .fadeOut(3000)
+                .next()
+                .fadeIn(3000)
+                .end()
+                .appendTo('#slider-1');
+            }, 4000);
+        });
+
+        $(document).ready(function () {
+            $(".login-box").css({ "display": "none" });
+            $(".login").click(function () {
+                $(".login-box").toggle().css({ "opacity": "1", "position": "absolute" });
+            });
+        });
+
+        $('.menu ul li').click(function () {
+            $(this).addClass('active').siblings().removeClass('active');
+        })
+    </script>
+    <script type="text/javascript">
+        //$(document).ready(function () {
+        //    $(".accordion2 h3").eq(0).addClass("active");
+        //    $(".accordion2 p").eq(0).show();
+        //    $(".accordion2 h3").click(function () {
+        //        $(this).next("p").slideToggle("slow")
+        //        .siblings("p:visible").slideUp("slow");
+        //        $(this).toggleClass("active");
+        //        $(this).siblings("h3").removeClass("active");
+        //    });
+
+        //});
+        function ShowPopUp() {
+            $("#LeaderBoardLogin").modal("show");
+        }
+
+        $(document).ready(function () {
+            $("#LeaderBoardLogin3").click(function () {
+                $("#LeaderBoardLogin").modal("show");
+            })
+            $('#footer-link').click()
+        });
+
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.collapse').on('shown.bs.collapse', function () {
+                $(this).parent().find(".glyphicon-plus").removeClass("glyphicon-plus").addClass("glyphicon-minus");
+            }).on('hidden.bs.collapse', function () {
+                $(this).parent().find(".glyphicon-minus").removeClass("glyphicon-minus").addClass("glyphicon-plus");
+            });
+
+            $(function () {
+                if ($.browser.msie && $.browser.version.substr(0, 1) < 7) {
+                    $('li').has('ul').mouseover(function () {
+                        $(this).children('ul').css('visibility', 'visible');
+                    }).mouseout(function () {
+                        $(this).children('ul').css('visibility', 'hidden');
+                    })
+                }
+            });
+          
+           
+        });
+
+
+        $(document).ready(function () {
+          
+            $(".box-text").find('p').find('span').removeAttr('style').css('font-size', '14px');
+            $("table,tr,td,span").css('font-size', '13px');
+        });
+
+    </script>
+
+</head>
+<body>
+
+    <form runat="server">
+        <header>
+            <div class="container-fulid">
+                <div class="topbar">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-6 col-xs-12">
+                                <span class="glyphicon glyphicon-envelope red"></span><span><a href="mailto:info@jetsavetours.com">info@jetsavetours.com</a></span>&nbsp;&nbsp;
+                        <span class="glyphicon glyphicon-phone red"></span><span>011-45616161</span>&nbsp;&nbsp;
+                                  <span class="glyphicon  glyphicon glyphicon-credit-card red"></span>
+                                <asp:LinkButton ID="btnPay" runat="server" Text="Pay Now" OnClick="btnPay_Click"></asp:LinkButton>
+
+
+                            </div>
+
+                            <div class="col-sm-6 col-xs-12">
+                                <div class="login-area">
+                                    <div class="col-sm-12 col-xs-12 pull-right text-right no-padding">
+                                        <div class="Login-User-View" id="dvLogout">
+                                            <div class="Welcome-div">
+
+                                                <asp:LoginView ID="HeadLoginView" runat="server">
+                                                    <AnonymousTemplate>
+                                                    </AnonymousTemplate>
+                                                    <LoggedInTemplate>
+                                                        Welcome
+                                                        <asp:LoginName ID="HeadLoginName" runat="server" />
+                                                        <asp:LoginStatus ID="HeadLoginStatus" runat="server" LogoutAction="Redirect" OnLoggedOut="HeadLoginStatus_LoggedOut" LogoutText="Log Out"
+                                                            LogoutPageUrl="Index.aspx" />
+
+                                                    </LoggedInTemplate>
+                                                </asp:LoginView>
+                                            </div>
+                                        </div>
+                                        <div class="Welcome-div">
+                                            <span>
+                                                <a onclick="JavaScript:return ShowPopUp();" runat="server" data-toggle="modal" id="LeaderBoardLogin3">Login</a>
+                                            </span>
+                                        </div>
+                                        <%--<a id="LeaderBoardLogin3" data-toggle="modal">Login<span class="caret"></span></a>--%>
+                                    </div>
+                                    <%--<div class="pull-right text-right col-sm-7 col-xs-7 col-md-5">
+                                        <div class="input-group" style="padding-bottom: 10px;">
+                                            <input type="Search" class="form-control" placeholder="Search">
+                                            <span class="input-group-addon glyphicon glyphicon-search search-icon"></span>
+
+                                        </div>
+
+                                    </div>--%>
+                                </div>
+                                <div class="modal fade" id="LeaderBoardLogin" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-sm">
+
+                                        <div class="modal-content" style="border-radius: 0; border: 3px solid #DDDDDD;">
+                                            <div class="modal-body" style="display: table">
+                                                <a class="glyphicon glyphicon-remove pull-right loginClose" id="userBox" data-dismiss="modal" aria-label="Close"></a>
+                                                <span class="icon-close"></span>
+                                                <div class="col-sm-12 col-xs-12">
+                                                    <div id="dvError" style="color: red; display: none">User name or password is incorrect.</div>
+                                                    <asp:Login ID="LoginUser" runat="server" LoginButtonStyle-CssClass="button" TextBoxStyle-CssClass="text"
+                                                        TitleText="" OnAuthenticate="LoginUser_Authenticate" Width="100%">
+                                                        <CheckBoxStyle CssClass="chkbox" />
+                                                        <HyperLinkStyle CssClass="hideSkiplink" />
+                                                        <LayoutTemplate>
+                                                            <div class="login">
+                                                                <div class="img glyphicon glyphicon-user"></div>
+                                                            </div>
+                                                            <div class="loginTxt text-center">Login</div>
+
+                                                            <div class="loginTxtfield">
+                                                                <div class="input-group col-xs-12 col-sm-12 form-group">
+                                                                    <label class="sr-only" for="exampleInputEmail2">Email</label>
+                                                                    <asp:TextBox ID="UserName" runat="server" placeholder="UserName" CssClass="form-control UserName"></asp:TextBox>
+                                                                </div>
+                                                                <asp:RequiredFieldValidator ID="UserNameRequired" runat="server" Display="Dynamic" ControlToValidate="UserName" ForeColor="Red"
+                                                                    CssClass="failureNotification" ErrorMessage="Email ID Is Required." ToolTip="Email ID Is Required."
+                                                                    ValidationGroup="LoginUserValidationGroup"></asp:RequiredFieldValidator>
+                                                                <asp:RegularExpressionValidator ID="REVEmail" runat="server"
+                                                                    ErrorMessage="Enter Correct Email." ControlToValidate="UserName"
+                                                                    ForeColor="Red"
+                                                                    ValidationExpression="^[a-zA-Z0-9 ]+$" Display="Dynamic"></asp:RegularExpressionValidator>
+                                                                <asp:HiddenField ID="hfTempData" runat="server" />
+                                                                <div style="display: none;">
+                                                                    <asp:TextBox ID="hfSetTime" runat="server"></asp:TextBox>
+                                                                </div>
+
+                                                                <div class="input-group col-xs-12 col-sm-12">
+                                                                    <label class="sr-only" for="exampleInputEmail2">Password</label>
+
+                                                                    <asp:TextBox ID="Password" runat="server" CssClass="form-control Password" placeholder="Password" TextMode="Password"></asp:TextBox>
+                                                                </div>
+                                                                <asp:RequiredFieldValidator ID="PasswordRequired" runat="server" ControlToValidate="Password" ForeColor="Red"
+                                                                    CssClass="failureNotification" ErrorMessage="Password Is Required." ToolTip="Password Is Required."
+                                                                    ValidationGroup="LoginUserValidationGroup"></asp:RequiredFieldValidator>
+                                                                <div>
+                                                                    <asp:CheckBox ID="chkRem" runat="server" />
+                                                                    <label>Remember me</label>
+                                                                </div>
+
+
+                                                                <%--  <a href="#">
+                                                                  <asp:Button ID="LoginButton" runat="server" CssClass="LoginButton" CommandName="Login" ValidationGroup="LoginUserValidationGroup" OnClick="btn_login" />
+                                                                    
+                                                                    <div class="RememberMeDiv">
+                                                                        <a href="#">
+                                                <img src="Images/SignBtn.jpg" alt="" class="img-responsive" />
+                                                <span>Remember me</span>
+                                            </a><a href="#" id="forgetPassword" onclick="forgetPassword()">
+                                                <div>Forgot Password?</div>
+                                            </a>
+                                                                    </div>--%>
+                                                            </div>
+                                                        </LayoutTemplate>
+                                                    </asp:Login>
+                                                </div>
+
+                                                <asp:Button ID="btnSave" runat="server" Text="Login" ValidationGroup="LoginUserValidationGroup" OnClick="btnSave_Click" CssClass="loginBtn col-xs-12 col-sm-12" />
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <%--    <div class="login-box">
+                                    <div class="form-group">
+                                         <asp:Label ID="lblusername" runat="server" Text="Username"></asp:Label>
+                                       <asp:TextBox ID="txtusername" runat="server"></asp:TextBox>
+                                       <asp:RequiredFieldValidator ID="requ"
+                                    </div>
+                                    <div class="form-group">
+                                       <asp:Label ID="lblpass" runat="server" Text="Password"></asp:Label>
+                                       <asp:TextBox ID="txtpassword" runat="server"></asp:TextBox>
+                                    </div>
+                                    <div class="form-group">
+ <asp:Button ID="LoginButton" runat="server" Text="Sign in" CommandName="Login" ValidationGroup="LoginUserValidationGroup" />
+                                        <input type="Submit" class="button" value="Login" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="checkbox" value="Forgot" />
+                                        <a href="#">Forgot Password</a>
+                                    </div>
+                                </div>--%>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="header-bg">
+                <nav role="navigation" class="navbar navbar-default visible-xs">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                   <div class="navbar-header">
+            <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="#" class="navbar-brand"><img src="Imagess/Jetsave-logo.jpg"  class="img-responsive"/></a>
+        </div>
+
+                    
+                 <%--    <div class="navbar-header">
+                        <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle" style="margin-top: 30px;">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a href="#" class="navbar-brand no-padding-top" style="height: auto;">
+                            </a>
+                    </div>--%>
+
+
+                    <!-- Collection of nav links, forms, and other content for toggling -->
+                    <div id="navbarCollapse" class="collapse navbar-collapse">
+                        <ul class="nav navbar-nav">
+                            <li>
+                                <a href="Index.aspx" class="anchor">Home</a>
+                            </li>
+                            <li><a href="About.aspx" class="anchor">About Us</a></li>
+                            <li><a href="Services.aspx">Services</a></li>
+                            <%--<li><a href="VisaInformation.aspx">Visas</a></li>--%>
+                            <li><a href="Technology.aspx">Technology</a></li>
+                            <li><a href="Coverage.aspx">Coverage</a></li>
+                            <li><a href="Authorization.aspx">Authorization</a></li>
+                            <li><a href="Membership.aspx">Trade Associations</a></li>
+                          
+                             <li class="dropdown">
+                                       
+                                 
+                                   <a href="#" data-toggle="dropdown" class="dropdown-toggle">Query<b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="InsuranceQuery.aspx">Insurance Query</a></li>
+                                    <li><a href="LegalizationQuery.aspx">Legalization Query </a></li>
+                                    <li><a href="Query.aspx">Tours Query</a></li>
+                                     <li><a href="VisaQuery.aspx">Visa Query</a></li>  
+                                </ul>
+
+                            </li>
+
+
+                            <li>
+                                <a href="Contact.aspx">Contact Us</a>
+                            </li>
+
+
+                        </ul>
+
+                    </div>
+                </nav>
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-4 col-xs-12 hidden-xs">
+                            <div class="col-sm-4 col-xs-12 no-padding">
+                            <img src="Imagess/25-years.jpg"  class="img-responsive" style="height:97px;"/>
+                                </div>
+                             <div class="col-sm-8 col-xs-12 no-padding">
+                            <a class="navbar-brand no-padding-left logo" href="Index.aspx" style="height: auto; padding: 0;">
+
+                                <img src="Imagess/Jetsave-logo.jpg" class="img-responsive" style="top: 15px; position: relative;" />
+                            </a>
+                                 </div>
+                        </div>
+                        <div class="col-sm-12 col-xs-12 col-md-8 no-padding-left">
+                            <div class="pull-right" style="margin-top: 5px;">
+                                <img src="Imagess/tours-logoes.jpg" class="img img-responsive" />
+                            </div>
+
+                            <nav class="menu hidden-xs">
+                                <ul class="nav navbar-nav navbar-right">
+                                    <li>
+                                        <a href="Index.aspx" class="anchor">Home</a>
+                                    </li>
+                                    <li><a href="About.aspx" class="anchor">About Us</a></li>
+                                    <li><a href="Services.aspx">Services</a></li>
+                                    <%-- <li><a href="VisaInformation.aspx">Visas</a></li>--%>
+                                    <li><a href="Technology.aspx">Technology</a></li>
+                                    <li><a href="Coverage.aspx">Coverage</a></li>
+                                    <li><a href="Authorization.aspx">Authorization</a></li>
+                                    <li><a href="Membership.aspx">Trade Associations</a></li>
+                                    <li>
+                                         <a href="#">Query<b class="caret"></b></a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="InsuranceQuery.aspx">Insurance Query </a></li>
+                                            <li><a href="LegalizationQuery.aspx">Legalization Query </a></li>
+                                            <li><a href="Query.aspx">Tours Query</a></li>
+                                             <li><a href="VisaQuery.aspx">Visa Query</a></li>  
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="Contact.aspx">Contact Us</a>
+                                    </li>
+                                </ul>
+                            </nav>
+
+                        </div>
+
+
+                        <nav role="navigation" class="navbar visible-xs" style="min-height: 0; border: none;">
+                            <!-- Brand and toggle get grouped for better mobile display -->
+                            <div class="adminMenu">
+                                <div class="col-sm-12">
+                                    <a href="#adminMenu" class="accordion-toggle" data-toggle="collapse" data-parent="#accordion">
+                                        <span class="glyphicon glyphicon-plus pull-right" style="padding: 10px 0px; display: inline-block"></span>
+                                        <span style="padding: 10px 0px; display: inline-block">Admin Menu <span class="glyphicon glyphicon-menu-down" style="position: relative; left: 5px; top: 2px;"></span></span>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- Collection of nav links, forms, and other content for toggling -->
+                            <div id="adminMenu" class="panel-collapse collapse">
+                                <ul class="nav navbar-nav">
+                                    <li style="border-right: none; width: 0px;">
+                                        <img src="Imagess/menu-rotate.png" /></li>
+                                    <li class="dropdown">
+                                        <a id="Li1" runat="server" href="ViewConsignmentList.aspx">Consignment</a>
+                                        <ul class="dropdown-menu">
+
+                                            <%--<li id="Li1" runat="server"><a href="ViewConsignmentList.aspx">Consignment List</a></li>--%>
+                                            <%-- <li id="Li2" runat="server"><a href="UpdateConsignmentStatus.aspx">Update Consignment Status</a></li>--%>
+                                        </ul>
+                                    </li>
+
+                                    <li class="dropdown">
+                                        <a href="#" data-toggle="dropdown" class="dropdown-toggle">Visas <b class="caret"></b></a>
+                                        <ul class="dropdown-menu">
+
+                                            <li id="Li3" runat="server"><a href="AddVisaForm.aspx">Add Visa Form</a></li>
+                                            <%-- <li id="Li4" runat="server"><a href="ShowVisaForm.aspx">View Visa Form</a></li>--%>
+                                            <li id="Li5" runat="server"><a href="AddVisaInformation.aspx">Add Visa Information</a></li>
+                                            <li id="Li2" runat="server"><a href="VisaInformation.aspx">View Visa Information</a></li>
+                                            <li id="Li6" runat="server"><a href="AddSchengenVisaForm.aspx">Schengen Visa Form</a></li>
+                                            <li id="Li4" runat="server"><a href="VaccinationVisaForm.aspx">Vaccination Visa Form</a></li>
+                                            <li id="Li17" runat="server"><a href="CoverNote.aspx">Jetsave Cover Note</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a href="#" data-toggle="dropdown" class="dropdown-toggle">Holiday <b class="caret"></b></a>
+                                        <ul class="dropdown-menu">
+                                            <li id="Li7" runat="server"><a href="AddHoliday.aspx">Add New Holiday</a></li>
+                                            <li id="Li8" runat="server"><a href="HolidayList.aspx">View Holiday List</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown" id="Liaagent" runat="server">
+                                        <a href="#" data-toggle="dropdown" class="dropdown-toggle">Agent <b class="caret"></b></a>
+                                        <ul class="dropdown-menu">
+                                            <li id="Li9" runat="server"><a href="AddAgent.aspx">Add Agent</a></li>
+                                            <li id="Li10" runat="server"><a href="AgentEditUpdate.aspx">Manage Agent</a></li>
+                                            <li id="li11" runat="server"><a href="ListAgent.aspx">Agent List</a></li>
+                                            <li id="Li12" runat="server"><a href="ExportAgent.aspx">Export Agent</a></li>
+                                            <%--<li id="Li13" runat="server"><a href="AgentEmailList.aspx">Agent E-Mail List</a></li>--%>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a href="#" data-toggle="dropdown" class="dropdown-toggle">News Letter<b class="caret"></b></a>
+
+                                        <ul class="dropdown-menu">
+
+                                            <li id="Li14" runat="server"><a href="NewsLetter.aspx">Add News Letter</a></li>
+                                            <li id="Li15" runat="server"><a href="ViewNewsLetter.aspx">View News Letter</a></li>
+
+
+
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown" id="Li16" runat="server">
+                                        <a href="#" data-toggle="dropdown" class="dropdown-toggle">Admin <b class="caret"></b></a>
+
+                                        <ul class="dropdown-menu">
+                                            <%--<li id="Li17" runat="server"><a href="UserMaster.aspx">New User</a></li>--%>
+                                            <li id="liconsulate" runat="server"><a href="AddConsulate.aspx">Add Consulate</a></li>
+                                            <li id="LiCountry" runat="server"><a href="AddCountry.aspx">Add Country</a></li>
+                                            <li id="listate" runat="server"><a href="AddState.aspx">Add State</a></li>
+                                            <li id="Li19" runat="server"><a href="AddCity.aspx">Add City</a></li>
+                                            <li id="livisaType" runat="server"><a href="AddVisaType.aspx">Add Visa Type</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+
+                            </div>
+
+                        </nav>
+
+                        <div class="col-md-8 col-sm-12 col-xs-12 pull-right hidden-xs" id="menulogin" runat="server">
+                            <div class="navSecond" id="adminMenuSection" runat="server">
+                                <ul class="menu-second">
+                                    <li style="border-right: none; width: 0px;">
+                                        <img src="Imagess/menu-rotate.png" /></li>
+                                    <li style="border-left: none;"><a>Consignment</a>
+                                        <ul>
+                                            <li id="viewConsignment" runat="server"><a href="ViewConsignmentList.aspx">View Consignment</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a>Visas</a>
+                                        <ul>
+
+                                            <li id="addVisaForm" runat="server"><a href="AddVisaForm.aspx">Add Visa Form</a></li>
+                                            <%--  <li id="showvisaForm" runat="server"><a href="ShowVisaForm.aspx">View Visa Form</a></li>--%>
+
+                                            <li id="viewVisaInfo" runat="server"><a href="VisaInformation.aspx">View Visa Information</a></li>
+                                            <li id="addVisaInfo" runat="server"><a href="AddVisaInformation.aspx">Add Visa Information</a></li>
+                                            <li id="Li08" runat="server"><a href="AddSchengenVisaForm.aspx">Schengen Visa Form</a></li>
+                                            <li id="Li13" runat="server"><a href="VaccinationVisaForm.aspx">Vaccination Visa Form</a></li>
+                                            <li id="covernote" runat="server"><a href="CoverNote.aspx">Jetsave Cover Note</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a>Holiday</a>
+                                        <ul>
+                                            <li id="addHoliday" runat="server"><a href="AddHoliday.aspx">Add New Holiday</a></li>
+                                            <li id="holidayList" runat="server"><a href="HolidayList.aspx">View Holiday List</a></li>
+                                        </ul>
+                                    </li>
+
+                                    <li id="Liagent" runat="server"><a>Agent</a>
+                                        <ul>
+                                            <li id="addAgent" runat="server"><a href="AddAgent.aspx">Add Agent</a></li>
+                                            <li id="agentEditUpdate" runat="server"><a href="AgentEditUpdate.aspx">Manage Agent</a></li>
+                                            <%--<li id="listAgent" runat="server"><a href="ListAgent.aspx">Agent List</a></li>
+                                            <li id="exportAgent" runat="server"><a href="ExportAgent.aspx">Export Agent</a></li>
+                                            <li id="agentEmailList" runat="server"><a href="AgentEmailList.aspx">Agent E-Mail List</a></li>
+                                            --%>
+                                        </ul>
+                                    </li>
+
+
+
+                                    <li><a>News Letter</a>
+                                        <ul>
+                                            <li id="newsLetter" runat="server"><a href="NewsLetter.aspx">Add News Letter</a></li>
+                                            <li id="viewnewsLetter" runat="server"><a href="ViewNewsLetter.aspx">View News Letter</a></li>
+                                        </ul>
+                                    </li>
+
+                                    <li><a>Accounting</a>
+                                        <ul>
+                                            <li id="invoiceList" runat="server"><a href="InvoiceList.aspx">Invoice Printing</a></li>
+                                            <%-- <li id="printInvoice" runat="server"><a href="PrintInvoice.aspx">Agent Invoice Printing</a></li>--%>
+                                            <%--<li id="reprintInvoice" runat="server"><a href="RePrintInvoice.aspx">Invoice RePrinting</a></li>--%>
+                                            <li id="billRegister" runat="server"><a href="BillRegister.aspx">Bill Summary</a></li>
+                                        </ul>
+                                    </li>
+                                    <li id="admin" runat="server"><a>Admin</a>
+                                        <ul>
+                                            <%--<li id="usermaster" runat="server"><a href="UserMaster.aspx">New User</a></li>--%>
+                                            <li id="consulate" runat="server"><a href="AddConsulate.aspx">Add Consulate</a></li>
+
+                                            <li id="country" runat="server"><a href="AddCountry.aspx">Add Country</a></li>
+                                            <li id="liistate" runat="server"><a href="AddState.aspx">Add State</a></li>
+                                            <li id="city" runat="server"><a href="AddCity.aspx">Add City</a></li>
+                                            <li id="liAddVisaType" runat="server"><a href="AddVisaType.aspx">Add Visa Type</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="navSecond" id="agentMenuSection" runat="server">
+                                <ul class="menu-second">
+                                    <li style="border-right: none; width: 0px;">
+                                        <img src="Imagess/menu-rotate.png" /></li>
+                                    <li><a href="ViewConsignmentList.aspx" id="A1" runat="server">Consignment Info</a></li>
+
+                                    <li><a>Visas</a>
+                                        <ul>
+                                            <li><a href="VisaInformation.aspx" id="A2" runat="server">Visa Info</a></li>
+                                            <li id="vacci" runat="server"><a href="VaccinationCoverNote.aspx">Vaccination Information</a></li>
+                                            <li id="Li20" runat="server"><a href="VaccinationCoverNote.aspx">Jetsave Cover Note</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="HolidayList.aspx" id="A3" runat="server">Holiday Info</a></li>
+                                    <li><a href="ViewNewsLetter.aspx" id="A4" runat="server">News Letter</a> </li>
+                                    <li><a>Accounting</a>
+                                        <ul>
+                                            <li id="Li25" runat="server"><a href="InvoiceList.aspx">Invoice Printing</a></li>
+                                            <%-- <li id="printInvoice" runat="server"><a href="PrintInvoice.aspx">Agent Invoice Printing</a></li>--%>
+                                            <%--<li id="reprintInvoice" runat="server"><a href="RePrintInvoice.aspx">Invoice RePrinting</a></li>--%>
+                                            <li id="Li26" runat="server"><a href="BillRegister.aspx">Bill Summary</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </header>
+
+
+        <%-- -------------------------------------------------------%>
+
+
+        <%--<div class="page">
+            <%--<div class="header">
+            <div class="title">
+                <h1>
+                    My ASP.NET Application
+                </h1>
+            </div>
+            <div class="loginDisplay">
+                <asp:LoginView ID="HeadLoginView" runat="server" EnableViewState="false">
+                    <AnonymousTemplate>
+                        [ <a href="~/Account/Login.aspx" ID="HeadLoginStatus" runat="server">Log In</a> ]
+                    </AnonymousTemplate>
+                    <LoggedInTemplate>
+                        Welcome <span class="bold"><asp:LoginName ID="HeadLoginName" runat="server" /></span>!
+                        [ <asp:LoginStatus ID="HeadLoginStatus" runat="server" LogoutAction="Redirect" LogoutText="Log Out" LogoutPageUrl="~/"/> ]
+                    </LoggedInTemplate>
+                </asp:LoginView>
+            </div>
+            
+        </div>
+            <div class="main">
+                <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+            </div>
+            <div class="clear">
+            </div>
+        </div>--%>
+        <%--  <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+    </asp:ContentPlaceHolder>--%>
+
+        <%-- <asp:ContentPlaceHolder ID="MainContents" runat="server">
+         </asp:ContentPlaceHolder>--%>
+
+        <asp:ContentPlaceHolder ID="MainContent" runat="server">
+        </asp:ContentPlaceHolder>
+
+
+        <footer class="footer">
+            <%-- <div class="container-fulid">
+                <div class="container visible-xs">
+
+                    <a data-toggle="collapse" href="#other">
+                        <h4>Footer Quicks Links
+        <span class="pull-right glyphicon glyphicon-chevron-down"></span></h4>
+                    </a>
+
+                    <div class="row collapse" id="other">
+
+                        <div class="col-sm-4 col-xs-12">
+                            <ul>
+                                <li>Tours Links</li>
+                                <li><a href="#">Cultural Tours India</a></li>
+                                <li><a href="#">Indian Classics Tours</a></li>
+                                <li><a href="#">Adventure Tours</a></li>
+                                <li><a href="#">India Train Tours</a></li>
+                                <li><a href="#">Special Interest Tours</a></li>
+                                <li><a href="#">North India Tours</a></li>
+                                <li><a href="#">South India Tours</a></li>
+                                <li><a href="#">Wildlife Tours</a></li>
+                                <li><a href="#">Pilgrimage Tours</a></li>
+                                <li><a href="#">Beach Tours</a></li>
+                                <li><a href="#">Embassy Holidays</a></li>
+
+                            </ul>
+                        </div>
+                        <div class="col-sm-4 col-xs-12">
+                            <ul>
+                                <li>Others Quicks Links</li>
+                                <li><a href="#">Profile</a></li>
+                                <li><a href="#">Visa</a></li>
+                                <li><a href="#">Visa Forms </a></li>
+                                <li><a href="#">Visa Consignment Form</a></li>
+                                <li><a href="#">Adventure Tours</a></li>
+                                <li><a href="#">India Info</a></li>
+                                <li><a href="#">India Hotel Reservation</a></li>
+                                <li><a href="#">Privacy Policy</a></li>
+                                <li><a href="#">User Agreement </a></li>
+                                <li><a href="#">Online Payment</a></li>
+                                <li><a href="#">Query</a></li>
+
+                            </ul>
+                        </div>
+                        <div class="col-sm-4 col-xs-12">
+                            <ul style="border: none;">
+                                <li>Contact Us</li>
+                                <li style="list-style: none;"><span class="glyphicon glyphicon-home col-sm-1 no-padding"></span>
+                                    <div class="col-sm-10">Jet Save India Tours Pvt. Ltd.</div>
+                                    <span class="glyphicon glyphicon-user col-sm-1  no-padding"></span>
+                                    <div class="col-sm-10">Mr. Anil Sharma (Managing Director)</div>
+                                    <span class="glyphicon glyphicon-map-marker col-sm-1  no-padding"></span>
+                                    <div class="col-sm-10">
+                                        30/28, IIIrd Floor, (Opp Mughal Mahal Restaurant),
+                        East Patel Nagar, New Delhi-110008, India
+                                    </div>
+                                    <span class="glyphicon glyphicon-phone-alt col-sm-1  no-padding"></span>
+                                    <div class="col-sm-10">
+                                        Huntting Line Number (30 Lines) 011 45616161
+                        24X7 (09811032235)
+                                    </div>
+                                    <span class="glyphicon glyphicon-print col-sm-1  no-padding"></span>
+                                    <div class="col-sm-10">+(91)-(11)-45616171/72</div>
+                                </li>
+
+
+                            </ul>
+                        </div>
+
+
+
+
+
+                    </div>
+
+                </div>
+                
+
+
+            </div>--%>
+            <div class="container-fulid footer-bottom">
+                <div class="container">
+
+                    <div class="row">
+                        <div class="col-sm-6 col-xs-12">&copy; 2014 All Rights Reserved by Jetsave India Tours Pvt. Ltd.</div>
+                        <div class="col-sm-6 col-xs-12 text-right">Designed & Developed By <a href="http://www.remielsoft.com/Home.htm" target="_blank">Remiel Softech Solutions</a></div>
+
+
+                    </div>
+                </div>
+            </div>
+
+            <p id="back-top">
+                <a href="#top"><span></span>&nbsp;</a>
+            </p>
+        </footer>
+    </form>
+
+
+</body>
+</html>

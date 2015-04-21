@@ -1,0 +1,2184 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9AAA5A6C-EBA9-47D8-A09E-E2CF732009E7}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>JSVisaTrackingWebApplication</RootNamespace>
+    <AssemblyName>JSVisaTrackingWebApplication</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=4.1.7.607, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\AjaxControlToolkit.7.0607\lib\40\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="AjaxControlToolkit.HtmlEditor.Sanitizer">
+      <HintPath>..\packages\AjaxControlToolkit.HtmlEditor.Sanitizer.15.1.1.100\lib\net40\AjaxControlToolkit.HtmlEditor.Sanitizer.dll</HintPath>
+    </Reference>
+    <Reference Include="AmexQuickPay">
+      <HintPath>E:\Pojects (C)\JetSaveNewSolution\JSVisaTrackingWebApplication\JSVisaTrackingWebApplication\bin\AmexQuickPay.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlAgilityPack">
+      <HintPath>..\packages\HtmlAgilityPack.1.4.9\lib\Net40\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Practices.ObjectBuilder">
+      <HintPath>..\RequiredAssemblies\Microsoft.Practices.ObjectBuilder.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="About.aspx" />
+    <Content Include="Account\ChangePassword.aspx" />
+    <Content Include="Account\ChangePasswordSuccess.aspx" />
+    <Content Include="Account\Login.aspx" />
+    <Content Include="Account\Register.aspx" />
+    <Content Include="AddCity.aspx" />
+    <Content Include="AddConsignment.aspx" />
+    <Content Include="AddConsulate.aspx" />
+    <Content Include="AddCountry.aspx" />
+    <Content Include="AddHoliday.aspx" />
+    <Content Include="AddNewHoliday.aspx" />
+    <Content Include="AddSchengenVisaForm.aspx" />
+    <Content Include="AddState.aspx" />
+    <Content Include="AddVisaForm.aspx" />
+    <Content Include="AddVisaForm\Benin_New.jpg" />
+    <Content Include="AddVisaForm\CROTIA-MEDICAL-DECLARATION.jpg" />
+    <Content Include="AddVisaForm\doctor list for medical.JPG" />
+    <Content Include="AddVisaForm\iraq-mf.jpg" />
+    <Content Include="AddVisaForm\MEDICAL-REPORT-S-AFRICA.JPG" />
+    <Content Include="AddVisaForm\Myanmar-Business_Visa_Form.JPG" />
+    <Content Include="AddVisaForm\Myanmar-Tourist_Visa_Form.JPG" />
+    <Content Include="AddVisaForm\RADIOLOGICAL-S-AFRICA.JPG" />
+    <Content Include="AddVisaForm\visa-form.asp" />
+    <Content Include="AddVisaForm\visa.gif" />
+    <Content Include="AddVisaType.aspx" />
+    <Content Include="AdvanceSearchReportaspx.aspx" />
+    <Content Include="AgeingAnalysis.aspx" />
+    <Content Include="AgentEditUpdate.aspx" />
+    <Content Include="AgentEmailList.aspx" />
+    <Content Include="AgentList.aspx" />
+    <Content Include="AgentMail.aspx" />
+    <Content Include="AmexPayment.aspx" />
+    <Content Include="Authorization.aspx" />
+    <Content Include="BankStatement.aspx" />
+    <Content Include="BillRegister.aspx" />
+    <Content Include="BillRegister1.aspx" />
+    <Content Include="BillRegisterInfoShow.aspx" />
+    <Content Include="bin\JSVisaTrackingWebApplication.dll" />
+    <Content Include="bin\JSVisaTrackingWebApplication.pdb" />
+    <Content Include="Contact.aspx" />
+    <Content Include="Controls\MailRemarks.ascx" />
+    <Content Include="CountryHolidayForm.aspx" />
+    <Content Include="Coverage.aspx" />
+    <Content Include="CoverNote.aspx" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\flexslider.css" />
+    <Content Include="css\jquery-ui.css" />
+    <Content Include="css\Login.css" />
+    <Content Include="css\modern-responsive.css" />
+    <Content Include="css\modern.css" />
+    <Content Include="css\site.css" />
+    <Content Include="css\theme-dark.css" />
+    <Content Include="css\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="css\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="css\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="css\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="css\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="css\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="css\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="css\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="css\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="css\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="css\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="css\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="css\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="css\themes\base\jquery-ui.css" />
+    <Content Include="css\themes\base\jquery.ui.accordion.css" />
+    <Content Include="css\themes\base\jquery.ui.all.css" />
+    <Content Include="css\themes\base\jquery.ui.autocomplete.css" />
+    <Content Include="css\themes\base\jquery.ui.base.css" />
+    <Content Include="css\themes\base\jquery.ui.button.css" />
+    <Content Include="css\themes\base\jquery.ui.core.css" />
+    <Content Include="css\themes\base\jquery.ui.datepicker.css" />
+    <Content Include="css\themes\base\jquery.ui.dialog.css" />
+    <Content Include="css\themes\base\jquery.ui.progressbar.css" />
+    <Content Include="css\themes\base\jquery.ui.resizable.css" />
+    <Content Include="css\themes\base\jquery.ui.selectable.css" />
+    <Content Include="css\themes\base\jquery.ui.slider.css" />
+    <Content Include="css\themes\base\jquery.ui.tabs.css" />
+    <Content Include="css\themes\base\jquery.ui.theme.css" />
+    <Content Include="css\themes\base\minified\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="css\themes\base\minified\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="css\themes\base\minified\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="css\themes\base\minified\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="css\themes\base\minified\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="css\themes\base\minified\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="css\themes\base\minified\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="css\themes\base\minified\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="css\themes\base\minified\images\ui-icons_222222_256x240.png" />
+    <Content Include="css\themes\base\minified\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="css\themes\base\minified\images\ui-icons_454545_256x240.png" />
+    <Content Include="css\themes\base\minified\images\ui-icons_888888_256x240.png" />
+    <Content Include="css\themes\base\minified\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="css\themes\base\minified\jquery-ui.min.css" />
+    <Content Include="css\themes\base\minified\jquery.ui.accordion.min.css" />
+    <Content Include="css\themes\base\minified\jquery.ui.autocomplete.min.css" />
+    <Content Include="css\themes\base\minified\jquery.ui.button.min.css" />
+    <Content Include="css\themes\base\minified\jquery.ui.core.min.css" />
+    <Content Include="css\themes\base\minified\jquery.ui.datepicker.min.css" />
+    <Content Include="css\themes\base\minified\jquery.ui.dialog.min.css" />
+    <Content Include="css\themes\base\minified\jquery.ui.progressbar.min.css" />
+    <Content Include="css\themes\base\minified\jquery.ui.resizable.min.css" />
+    <Content Include="css\themes\base\minified\jquery.ui.selectable.min.css" />
+    <Content Include="css\themes\base\minified\jquery.ui.slider.min.css" />
+    <Content Include="css\themes\base\minified\jquery.ui.tabs.min.css" />
+    <Content Include="css\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="DataExportTally.aspx" />
+    <Content Include="Default.aspx" />
+    <Content Include="EditDeleteConsignment.aspx" />
+    <Content Include="EditReceipt.aspx" />
+    <Content Include="EmbassyFees.aspx" />
+    <Content Include="EmbassyMaster.aspx" />
+    <Content Include="ExportAgent.aspx" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\license.txt" />
+    <Content Include="AddVisaForm\Desert.jpg" />
+    <Content Include="GenerateInvoiceForm.aspx" />
+    <Content Include="GroupMaster.aspx" />
+    <Content Include="HolidayList.aspx" />
+    <Content Include="HotelReservation.aspx" />
+    <Content Include="Imagess\25-years.jpg" />
+    <Content Include="Imagess\about.jpg" />
+    <Content Include="Imagess\accent.png" />
+    <Content Include="Imagess\adtoi.jpg" />
+    <Content Include="Imagess\american.jpg" />
+    <Content Include="Imagess\Amritsar-S.jpg" />
+    <Content Include="Imagess\arrow-top.png" />
+    <Content Include="Imagess\arrow1.jpg" />
+    <Content Include="Imagess\arrow1.png" />
+    <Content Include="Imagess\arrow2.jpg" />
+    <Content Include="Imagess\arrow2.png" />
+    <Content Include="Imagess\arrows.jpg" />
+    <Content Include="Imagess\arrows.png" />
+    <Content Include="Imagess\Authorization.png" />
+    <Content Include="Imagess\banner1.jpg" />
+    <Content Include="Imagess\banner2.jpg" />
+    <Content Include="Imagess\banner3.jpg" />
+    <Content Include="Imagess\banner4.jpg" />
+    <Content Include="Imagess\banner5.jpg" />
+    <Content Include="Imagess\bullet.png" />
+    <Content Include="Imagess\celender.png" />
+    <Content Include="Imagess\close-icon.png" />
+    <Content Include="Imagess\close.jpg" />
+    <Content Include="Imagess\Corbett-National-Park-S.jpg" />
+    <Content Include="Imagess\CourierCargo.jpg" />
+    <Content Include="Imagess\CourierCargoIcon.png" />
+    <Content Include="Imagess\customer.png" />
+    <Content Include="Imagess\date-arrow1.png" />
+    <Content Include="Imagess\date-arrow2.png" />
+    <Content Include="Imagess\date-arrow3.png" />
+    <Content Include="Imagess\date-arrow4.png" />
+    <Content Include="Imagess\gallary\beach.jpg" />
+    <Content Include="Imagess\gallary\classic.jpg" />
+    <Content Include="Imagess\gallary\gate.jpg" />
+    <Content Include="Imagess\gallary\hawa-mahal.jpg" />
+    <Content Include="Imagess\gallary\india-gate.jpg" />
+    <Content Include="Imagess\gallary\jal-mahal.jpg" />
+    <Content Include="Imagess\gallary\lotus-tample.jpg" />
+    <Content Include="Imagess\gallary\nepal.jpg" />
+    <Content Include="Imagess\gallary\northIndia.jpg" />
+    <Content Include="Imagess\gallary\rajasthan.jpg" />
+    <Content Include="Imagess\gallary\Southern.jpg" />
+    <Content Include="Imagess\gallary\southIndia.jpg" />
+    <Content Include="Imagess\gallary\taj.jpg" />
+    <Content Include="Imagess\gallary\tajmahal.jpg" />
+    <Content Include="Imagess\heroAccent.png" />
+    <Content Include="Imagess\hotal.jpg" />
+    <Content Include="Imagess\hotal1.jpg" />
+    <Content Include="Imagess\iaai.jpg" />
+    <Content Include="Imagess\InboundTours.jpg" />
+    <Content Include="Imagess\InboundToursIcon.png" />
+    <Content Include="Imagess\insurance.png" />
+    <Content Include="Imagess\Jetsave-logo.jpg" />
+    <Content Include="Imagess\Jodhpur.jpg" />
+    <Content Include="Imagess\lato.jpg" />
+    <Content Include="Imagess\Legalization.jpg" />
+    <Content Include="Imagess\Legalization.png" />
+    <Content Include="Imagess\list-arrow.png" />
+    <Content Include="Imagess\lock.jpg" />
+    <Content Include="Imagess\logo.gif" />
+    <Content Include="Imagess\logo.png" />
+    <Content Include="Imagess\Manali.-Kullu-Valley-S.jpg" />
+    <Content Include="Imagess\map.jpg" />
+    <Content Include="Imagess\map1.gif" />
+    <Content Include="Imagess\MeetAssist.jpg" />
+    <Content Include="Imagess\MeetAssistIcon.png" />
+    <Content Include="Imagess\menu-rotate.png" />
+    <Content Include="Imagess\menuDivider.png" />
+    <Content Include="Imagess\news.png" />
+    <Content Include="Imagess\next.png" />
+    <Content Include="Imagess\OnlineAppointments.jpg" />
+    <Content Include="Imagess\OnlineAppointmentsIcon.png" />
+    <Content Include="Imagess\OnsiteSupportIcon.png" />
+    <Content Include="Imagess\orderedList0.png" />
+    <Content Include="Imagess\orderedList1.png" />
+    <Content Include="Imagess\orderedList2.png" />
+    <Content Include="Imagess\orderedList3.png" />
+    <Content Include="Imagess\orderedList4.png" />
+    <Content Include="Imagess\orderedList5.png" />
+    <Content Include="Imagess\orderedList6.png" />
+    <Content Include="Imagess\orderedList7.png" />
+    <Content Include="Imagess\orderedList8.png" />
+    <Content Include="Imagess\orderedList9.png" />
+    <Content Include="Imagess\otoai.jpg" />
+    <Content Include="Imagess\passport.png" />
+    <Content Include="Imagess\PickDrop.jpg" />
+    <Content Include="Imagess\PickupDropIcon.png" />
+    <Content Include="Imagess\prev.png" />
+    <Content Include="Imagess\price.png" />
+    <Content Include="Imagess\Rajasthan.jpg" />
+    <Content Include="Imagess\RanthambhoreS.jpg" />
+    <Content Include="Imagess\right-sign.png" />
+    <Content Include="Imagess\send-query.jpg" />
+    <Content Include="Imagess\services.png" />
+    <Content Include="Imagess\skal.jpg" />
+    <Content Include="Imagess\Support.jpg" />
+    <Content Include="Imagess\taai.jpg" />
+    <Content Include="Imagess\tafi.jpg" />
+    <Content Include="Imagess\technologies.jpg" />
+    <Content Include="Imagess\Temple-S.jpg" />
+    <Content Include="Imagess\tour.png" />
+    <Content Include="Imagess\TourPakages.jpg" />
+    <Content Include="Imagess\tours-logoes.jpg" />
+    <Content Include="Imagess\TravelInsurance.jpg" />
+    <Content Include="Imagess\visa.jpg" />
+    <Content Include="Imagess\visa.png" />
+    <Content Include="Imagess\VisaAssistance.jpg" />
+    <Content Include="images\1.jpg" />
+    <Content Include="images\1005-BizSpark-261x230.jpg" />
+    <Content Include="images\1372698761_pen.png" />
+    <Content Include="images\1372698821_edit-delete.png" />
+    <Content Include="images\2.jpg" />
+    <Content Include="images\3.jpg" />
+    <Content Include="images\4.jpg" />
+    <Content Include="images\5.jpg" />
+    <Content Include="images\armor.png" />
+    <Content Include="images\author.jpg" />
+    <Content Include="images\bage-activity.png" />
+    <Content Include="images\bage-alert.png" />
+    <Content Include="images\bage-attention.png" />
+    <Content Include="images\bage-available.png" />
+    <Content Include="images\bage-away.png" />
+    <Content Include="images\bage-busy.png" />
+    <Content Include="images\bage-error.png" />
+    <Content Include="images\bage-newMessage.png" />
+    <Content Include="images\bage-paused.png" />
+    <Content Include="images\bage-playing.png" />
+    <Content Include="images\bage-unavailable.png" />
+    <Content Include="images\cal.gif" />
+    <Content Include="images\Calendar128.png" />
+    <Content Include="images\Camera48.png" />
+    <Content Include="images\chrome.png" />
+    <Content Include="images\close.jpg" />
+    <Content Include="images\collapse24-black.png" />
+    <Content Include="images\collapse24.png" />
+    <Content Include="images\collapse32-black.png" />
+    <Content Include="images\collapse32.png" />
+    <Content Include="images\currency_sign_rupee.png" />
+    <Content Include="images\download-32.png" />
+    <Content Include="images\DownloadGreen.png" />
+    <Content Include="images\excel2013icon.png" />
+    <Content Include="images\expand24-black.png" />
+    <Content Include="images\expand24.png" />
+    <Content Include="images\expand32-black.png" />
+    <Content Include="images\expand32.png" />
+    <Content Include="images\firefox.png" />
+    <Content Include="images\fork-32.png" />
+    <Content Include="images\github.png" />
+    <Content Include="images\grid.png" />
+    <Content Include="images\icons-white.png" />
+    <Content Include="images\icons.png" />
+    <Content Include="images\ie.png" />
+    <Content Include="images\images.jpg" />
+    <Content Include="images\imgdel.jpg" />
+    <Content Include="images\imgdel.png" />
+    <Content Include="images\imgedit.jpg" />
+    <Content Include="images\imgedit.png" />
+    <Content Include="images\index_02.jpg" />
+    <Content Include="images\InternetExplorer128.png" />
+    <Content Include="images\Jetsavelogo.png" />
+    <Content Include="images\Kerala1.jpg" />
+    <Content Include="images\kerla.jpg" />
+    <Content Include="images\kovalam11.jpg" />
+    <Content Include="images\Loader.GIF" />
+    <Content Include="images\lock-open.png" />
+    <Content Include="images\lock.png" />
+    <Content Include="images\logo-jetbrains.jpg" />
+    <Content Include="images\logo32.png" />
+    <Content Include="images\Mail128.png" />
+    <Content Include="images\Market128.png" />
+    <Content Include="images\michael.jpg" />
+    <Content Include="images\Music128.png" />
+    <Content Include="images\myface.jpg" />
+    <Content Include="images\NorthIndTour.jpg" />
+    <Content Include="images\onenote2013icon.png" />
+    <Content Include="images\opera.png" />
+    <Content Include="images\Picture128.png" />
+    <Content Include="images\preloader-w8-cycle-black.gif" />
+    <Content Include="images\preloader-w8-cycle-white.gif" />
+    <Content Include="images\preloader-w8-line-black.gif" />
+    <Content Include="images\preloader-w8-line-white.gif" />
+    <Content Include="images\print.jpg" />
+    <Content Include="images\print.png" />
+    <Content Include="images\pull24-dark.png" />
+    <Content Include="images\pull24.png" />
+    <Content Include="images\responsive.png" />
+    <Content Include="images\row24.png" />
+    <Content Include="images\Rss128.png" />
+    <Content Include="images\SauthIndTour.jpg" />
+    <Content Include="images\shield-user.png" />
+    <Content Include="images\simple.png" />
+    <Content Include="images\spface.jpg" />
+    <Content Include="images\star32.png" />
+    <Content Include="images\stock-up.png" />
+    <Content Include="images\svface.jpg" />
+    <Content Include="images\taj.jpg" />
+    <Content Include="images\vbface.jpg" />
+    <Content Include="images\Video128.png" />
+    <Content Include="images\view-32.png" />
+    <Content Include="images\visa-n1.jpg" />
+    <Content Include="images\visa-n2.jpg" />
+    <Content Include="images\visa-n3.jpg" />
+    <Content Include="images\visa-n4.jpg" />
+    <Content Include="images\visa-n5.jpg" />
+    <Content Include="images\WIN8.png" />
+    <Content Include="images\windows-8-metro.jpg" />
+    <Content Include="images\windows8_metro_green_1920_1080.jpg" />
+    <Content Include="images\word2013icon.png" />
+    <Content Include="images\YouTube128.png" />
+    <Content Include="image\button_cancel.png" />
+    <Content Include="image\edit-icon %282%29.png" />
+    <Content Include="image\images %281%29.jpg" />
+    <Content Include="image\images %282%29.jpg" />
+    <Content Include="image\images %283%29.jpg" />
+    <Content Include="image\images.jpg" />
+    <Content Include="image\jetsave-logo.gif" />
+    <Content Include="image\Letter-A-icon.png" />
+    <Content Include="image\Letter-B-icon.png" />
+    <Content Include="image\Letter-E-icon.png" />
+    <Content Include="image\Letter-F-icon.png" />
+    <Content Include="image\Letter-G-icon.png" />
+    <Content Include="image\Letter-H-icon.png" />
+    <Content Include="image\Letter-I-icon.png" />
+    <Content Include="image\Letter-J-icon.png" />
+    <Content Include="image\Letter-K-icon.png" />
+    <Content Include="image\Letter-L-icon.png" />
+    <Content Include="image\Letter-M-icon.png" />
+    <Content Include="image\Letter-N-icon.png" />
+    <Content Include="image\Letter-O-icon.png" />
+    <Content Include="image\Letter-P-icon.png" />
+    <Content Include="image\Letter-R-icon.png" />
+    <Content Include="image\Letter-S-icon.png" />
+    <Content Include="image\Letter-T-icon.png" />
+    <Content Include="image\Letter-U-icon.png" />
+    <Content Include="image\Letter-W-icon.png" />
+    <Content Include="image\Letter-X-icon.png" />
+    <Content Include="image\Letter-Y-icon.png" />
+    <Content Include="image\Letter-Z-icon.png" />
+    <Content Include="image\loader_circle.gif" />
+    <Content Include="image\Rupees-symbol.png" />
+    <Content Include="Index.aspx" />
+    <Content Include="IndiaTravellingInformation.aspx" />
+    <Content Include="InsuranceQuery.aspx" />
+    <Content Include="InvoiceList.aspx" />
+    <Content Include="javascript\accordion.js" />
+    <Content Include="javascript\buttonset.js" />
+    <Content Include="javascript\calendar.js" />
+    <Content Include="javascript\carousel.js" />
+    <Content Include="javascript\contextmenu.js" />
+    <Content Include="javascript\dialog.js" />
+    <Content Include="javascript\dropdown.js" />
+    <Content Include="javascript\input-control.js" />
+    <Content Include="javascript\jquery-1.9.0.min.js" />
+    <Content Include="javascript\jquery.mousewheel.min.js" />
+    <Content Include="javascript\moment.js" />
+    <Content Include="javascript\moment_langs.js" />
+    <Content Include="javascript\pagecontrol.js" />
+    <Content Include="javascript\pagelist.js" />
+    <Content Include="javascript\rating.js" />
+    <Content Include="javascript\slider.js" />
+    <Content Include="javascript\start-menu.js" />
+    <Content Include="javascript\tile-drag.js" />
+    <Content Include="javascript\tile-slider.js" />
+    <Content Include="LegalizationQuery.aspx" />
+    <Content Include="ListAgent.aspx" />
+    <Content Include="Location.aspx" />
+    <Content Include="ManageUser.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Membership.aspx" />
+    <Content Include="MiscellaneousReport.aspx" />
+    <Content Include="Miscelllaneous_charges.aspx" />
+    <Content Include="mycustompage.html" />
+    <Content Include="NewsLetter.aspx" />
+    <Content Include="NewsLetterFrame.aspx" />
+    <Content Include="obj\Debug\JSVisaTrackingWebApplication.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\JSVisaTrackingWebApplication.dll" />
+    <Content Include="obj\Debug\JSVisaTrackingWebApplication.pdb" />
+    <Content Include="PreviewPrintInvoice.aspx" />
+    <Content Include="PrintInvoice.aspx" />
+    <Content Include="Query.aspx" />
+    <Content Include="ReceiptGeneration.aspx" />
+    <Content Include="ReceiptPrint.aspx" />
+    <Content Include="RePrintInvoice.aspx" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\Float.js" />
+    <Content Include="Scripts\html5shiv.js" />
+    <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.4.1.js" />
+    <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="Scripts\jquery-ui.min.js" />
+    <Content Include="Scripts\jquery.flexslider.js" />
+    <Content Include="Scripts\jquery.min.js" />
+    <Content Include="Scripts\jquery.newsTicker.js" />
+    <Content Include="Scripts\s3Slider.js" />
+    <Content Include="SearchEmbassyFee.aspx" />
+    <Content Include="SearchVisaForm.aspx" />
+    <Content Include="SentMail.aspx" />
+    <Content Include="Services.aspx" />
+    <Content Include="ShowVisaForm.aspx" />
+    <Content Include="StatementOfAccount.aspx" />
+    <Content Include="SummaryReport.aspx" />
+    <Content Include="Technology.aspx" />
+    <Content Include="Test.aspx" />
+    <Content Include="AddVisaInformation.aspx" />
+    <Content Include="testMail.aspx" />
+    <Content Include="UpdateConsignmentStatus.aspx" />
+    <Content Include="UserMaster.aspx" />
+    <Content Include="UserTaskMapping.aspx" />
+    <Content Include="VacationPackages.aspx" />
+    <Content Include="VaccinationCoverNote.aspx" />
+    <Content Include="VaccinationVisaForm.aspx" />
+    <Content Include="ViewConsignmentList.aspx" />
+    <Content Include="ViewList.aspx" />
+    <Content Include="ViewNewsLetter.aspx" />
+    <Content Include="ViewPaymentdetail.aspx" />
+    <Content Include="ViewPaymentResponse.aspx" />
+    <Content Include="ViewVisaInformation.aspx" />
+    <Content Include="VisaInformation.aspx" />
+    <Content Include="VisaQuery.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="AddAgent.aspx" />
+    <Content Include="WebForm2.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ChangePasswordSuccess.aspx.cs">
+      <DependentUpon>ChangePasswordSuccess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ChangePasswordSuccess.aspx.designer.cs">
+      <DependentUpon>ChangePasswordSuccess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddCity.aspx.cs">
+      <DependentUpon>AddCity.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddCity.aspx.designer.cs">
+      <DependentUpon>AddCity.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddConsignment.aspx.cs">
+      <DependentUpon>AddConsignment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddConsignment.aspx.designer.cs">
+      <DependentUpon>AddConsignment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddConsulate.aspx.cs">
+      <DependentUpon>AddConsulate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddConsulate.aspx.designer.cs">
+      <DependentUpon>AddConsulate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddCountry.aspx.cs">
+      <DependentUpon>AddCountry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddCountry.aspx.designer.cs">
+      <DependentUpon>AddCountry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddHoliday.aspx.cs">
+      <DependentUpon>AddHoliday.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddHoliday.aspx.designer.cs">
+      <DependentUpon>AddHoliday.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddNewHoliday.aspx.cs">
+      <DependentUpon>AddNewHoliday.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddNewHoliday.aspx.designer.cs">
+      <DependentUpon>AddNewHoliday.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddSchengenVisaForm.aspx.cs">
+      <DependentUpon>AddSchengenVisaForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddSchengenVisaForm.aspx.designer.cs">
+      <DependentUpon>AddSchengenVisaForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddState.aspx.cs">
+      <DependentUpon>AddState.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddState.aspx.designer.cs">
+      <DependentUpon>AddState.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddVisaForm.aspx.cs">
+      <DependentUpon>AddVisaForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddVisaForm.aspx.designer.cs">
+      <DependentUpon>AddVisaForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddVisaType.aspx.cs">
+      <DependentUpon>AddVisaType.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddVisaType.aspx.designer.cs">
+      <DependentUpon>AddVisaType.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdvanceSearchReportaspx.aspx.cs">
+      <DependentUpon>AdvanceSearchReportaspx.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdvanceSearchReportaspx.aspx.designer.cs">
+      <DependentUpon>AdvanceSearchReportaspx.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AgeingAnalysis.aspx.cs">
+      <DependentUpon>AgeingAnalysis.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AgeingAnalysis.aspx.designer.cs">
+      <DependentUpon>AgeingAnalysis.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AgentEditUpdate.aspx.cs">
+      <DependentUpon>AgentEditUpdate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AgentEditUpdate.aspx.designer.cs">
+      <DependentUpon>AgentEditUpdate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AgentEmailList.aspx.cs">
+      <DependentUpon>AgentEmailList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AgentEmailList.aspx.designer.cs">
+      <DependentUpon>AgentEmailList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AgentList.aspx.cs">
+      <DependentUpon>AgentList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AgentList.aspx.designer.cs">
+      <DependentUpon>AgentList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AgentMail.aspx.cs">
+      <DependentUpon>AgentMail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AgentMail.aspx.designer.cs">
+      <DependentUpon>AgentMail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AmexPayment.aspx.cs">
+      <DependentUpon>AmexPayment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AmexPayment.aspx.designer.cs">
+      <DependentUpon>AmexPayment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Authorization.aspx.cs">
+      <DependentUpon>Authorization.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Authorization.aspx.designer.cs">
+      <DependentUpon>Authorization.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BankStatement.aspx.cs">
+      <DependentUpon>BankStatement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BankStatement.aspx.designer.cs">
+      <DependentUpon>BankStatement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BillRegister.aspx.cs">
+      <DependentUpon>BillRegister.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BillRegister.aspx.designer.cs">
+      <DependentUpon>BillRegister.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BillRegister1.aspx.cs">
+      <DependentUpon>BillRegister1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BillRegister1.aspx.designer.cs">
+      <DependentUpon>BillRegister1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BillRegisterInfoShow.aspx.cs">
+      <DependentUpon>BillRegisterInfoShow.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BillRegisterInfoShow.aspx.designer.cs">
+      <DependentUpon>BillRegisterInfoShow.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MailRemarks.ascx.cs">
+      <DependentUpon>MailRemarks.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\MailRemarks.ascx.designer.cs">
+      <DependentUpon>MailRemarks.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CountryHolidayForm.aspx.cs">
+      <DependentUpon>CountryHolidayForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CountryHolidayForm.aspx.designer.cs">
+      <DependentUpon>CountryHolidayForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Coverage.aspx.cs">
+      <DependentUpon>Coverage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Coverage.aspx.designer.cs">
+      <DependentUpon>Coverage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CoverNote.aspx.cs">
+      <DependentUpon>CoverNote.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CoverNote.aspx.designer.cs">
+      <DependentUpon>CoverNote.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DataExportTally.aspx.cs">
+      <DependentUpon>DataExportTally.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DataExportTally.aspx.designer.cs">
+      <DependentUpon>DataExportTally.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.Master.cs">
+      <DependentUpon>Default.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.Master.designer.cs">
+      <DependentUpon>Default.Master</DependentUpon>
+    </Compile>
+    <Compile Include="EditDeleteConsignment.aspx.cs">
+      <DependentUpon>EditDeleteConsignment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditDeleteConsignment.aspx.designer.cs">
+      <DependentUpon>EditDeleteConsignment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EditReceipt.aspx.cs">
+      <DependentUpon>EditReceipt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditReceipt.aspx.designer.cs">
+      <DependentUpon>EditReceipt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EmbassyFees.aspx.cs">
+      <DependentUpon>EmbassyFees.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EmbassyFees.aspx.designer.cs">
+      <DependentUpon>EmbassyFees.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EmbassyMaster.aspx.cs">
+      <DependentUpon>EmbassyMaster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EmbassyMaster.aspx.designer.cs">
+      <DependentUpon>EmbassyMaster.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ExportAgent.aspx.cs">
+      <DependentUpon>ExportAgent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ExportAgent.aspx.designer.cs">
+      <DependentUpon>ExportAgent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GenerateInvoiceForm.aspx.cs">
+      <DependentUpon>GenerateInvoiceForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GenerateInvoiceForm.aspx.designer.cs">
+      <DependentUpon>GenerateInvoiceForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="GroupMaster.aspx.cs">
+      <DependentUpon>GroupMaster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GroupMaster.aspx.designer.cs">
+      <DependentUpon>GroupMaster.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HolidayList.aspx.cs">
+      <DependentUpon>HolidayList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HolidayList.aspx.designer.cs">
+      <DependentUpon>HolidayList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HotelReservation.aspx.cs">
+      <DependentUpon>HotelReservation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HotelReservation.aspx.designer.cs">
+      <DependentUpon>HotelReservation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IndiaTravellingInformation.aspx.cs">
+      <DependentUpon>IndiaTravellingInformation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IndiaTravellingInformation.aspx.designer.cs">
+      <DependentUpon>IndiaTravellingInformation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InsuranceQuery.aspx.cs">
+      <DependentUpon>InsuranceQuery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InsuranceQuery.aspx.designer.cs">
+      <DependentUpon>InsuranceQuery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InvoiceList.aspx.cs">
+      <DependentUpon>InvoiceList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InvoiceList.aspx.designer.cs">
+      <DependentUpon>InvoiceList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LegalizationQuery.aspx.cs">
+      <DependentUpon>LegalizationQuery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LegalizationQuery.aspx.designer.cs">
+      <DependentUpon>LegalizationQuery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="list.cs" />
+    <Compile Include="ListAgent.aspx.cs">
+      <DependentUpon>ListAgent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ListAgent.aspx.designer.cs">
+      <DependentUpon>ListAgent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Location.aspx.cs">
+      <DependentUpon>Location.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Location.aspx.designer.cs">
+      <DependentUpon>Location.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Membership.aspx.cs">
+      <DependentUpon>Membership.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Membership.aspx.designer.cs">
+      <DependentUpon>Membership.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MiscellaneousReport.aspx.cs">
+      <DependentUpon>MiscellaneousReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MiscellaneousReport.aspx.designer.cs">
+      <DependentUpon>MiscellaneousReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Miscelllaneous_charges.aspx.cs">
+      <DependentUpon>Miscelllaneous_charges.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Miscelllaneous_charges.aspx.designer.cs">
+      <DependentUpon>Miscelllaneous_charges.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NewsLetter.aspx.cs">
+      <DependentUpon>NewsLetter.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NewsLetter.aspx.designer.cs">
+      <DependentUpon>NewsLetter.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NewsLetterFrame.aspx.cs">
+      <DependentUpon>NewsLetterFrame.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NewsLetterFrame.aspx.designer.cs">
+      <DependentUpon>NewsLetterFrame.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PaymentGen.cs" />
+    <Compile Include="PreviewPrintInvoice.aspx.cs">
+      <DependentUpon>PreviewPrintInvoice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PreviewPrintInvoice.aspx.designer.cs">
+      <DependentUpon>PreviewPrintInvoice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PrintInvoice.aspx.cs">
+      <DependentUpon>PrintInvoice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PrintInvoice.aspx.designer.cs">
+      <DependentUpon>PrintInvoice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Query.aspx.cs">
+      <DependentUpon>Query.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Query.aspx.designer.cs">
+      <DependentUpon>Query.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReceiptGeneration.aspx.cs">
+      <DependentUpon>ReceiptGeneration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReceiptGeneration.aspx.designer.cs">
+      <DependentUpon>ReceiptGeneration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReceiptPrint.aspx.cs">
+      <DependentUpon>ReceiptPrint.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReceiptPrint.aspx.designer.cs">
+      <DependentUpon>ReceiptPrint.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RePrintInvoice.aspx.cs">
+      <DependentUpon>RePrintInvoice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RePrintInvoice.aspx.designer.cs">
+      <DependentUpon>RePrintInvoice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SearchEmbassyFee.aspx.cs">
+      <DependentUpon>SearchEmbassyFee.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SearchEmbassyFee.aspx.designer.cs">
+      <DependentUpon>SearchEmbassyFee.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SearchVisaForm.aspx.cs">
+      <DependentUpon>SearchVisaForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SearchVisaForm.aspx.designer.cs">
+      <DependentUpon>SearchVisaForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SentMail.aspx.cs">
+      <DependentUpon>SentMail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SentMail.aspx.designer.cs">
+      <DependentUpon>SentMail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Services.aspx.cs">
+      <DependentUpon>Services.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Services.aspx.designer.cs">
+      <DependentUpon>Services.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Shared\BasePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Shared\RegularExpression.cs" />
+    <Compile Include="ShowVisaForm.aspx.cs">
+      <DependentUpon>ShowVisaForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ShowVisaForm.aspx.designer.cs">
+      <DependentUpon>ShowVisaForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="AddAgent.aspx.cs">
+      <DependentUpon>AddAgent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddAgent.aspx.designer.cs">
+      <DependentUpon>AddAgent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StatementOfAccount.aspx.cs">
+      <DependentUpon>StatementOfAccount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StatementOfAccount.aspx.designer.cs">
+      <DependentUpon>StatementOfAccount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SummaryReport.aspx.cs">
+      <DependentUpon>SummaryReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SummaryReport.aspx.designer.cs">
+      <DependentUpon>SummaryReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Technology.aspx.cs">
+      <DependentUpon>Technology.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Technology.aspx.designer.cs">
+      <DependentUpon>Technology.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Test.aspx.cs">
+      <DependentUpon>Test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Test.aspx.designer.cs">
+      <DependentUpon>Test.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddVisaInformation.aspx.cs">
+      <DependentUpon>AddVisaInformation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddVisaInformation.aspx.designer.cs">
+      <DependentUpon>AddVisaInformation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="testMail.aspx.cs">
+      <DependentUpon>testMail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="testMail.aspx.designer.cs">
+      <DependentUpon>testMail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateConsignmentStatus.aspx.cs">
+      <DependentUpon>UpdateConsignmentStatus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UpdateConsignmentStatus.aspx.designer.cs">
+      <DependentUpon>UpdateConsignmentStatus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserMaster.aspx.cs">
+      <DependentUpon>UserMaster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserMaster.aspx.designer.cs">
+      <DependentUpon>UserMaster.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserTaskMapping.aspx.cs">
+      <DependentUpon>UserTaskMapping.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserTaskMapping.aspx.designer.cs">
+      <DependentUpon>UserTaskMapping.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VacationPackages.aspx.cs">
+      <DependentUpon>VacationPackages.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VacationPackages.aspx.designer.cs">
+      <DependentUpon>VacationPackages.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VaccinationCoverNote.aspx.cs">
+      <DependentUpon>VaccinationCoverNote.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VaccinationCoverNote.aspx.designer.cs">
+      <DependentUpon>VaccinationCoverNote.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VaccinationVisaForm.aspx.cs">
+      <DependentUpon>VaccinationVisaForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VaccinationVisaForm.aspx.designer.cs">
+      <DependentUpon>VaccinationVisaForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewConsignmentList.aspx.cs">
+      <DependentUpon>ViewConsignmentList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewConsignmentList.aspx.designer.cs">
+      <DependentUpon>ViewConsignmentList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewList.aspx.cs">
+      <DependentUpon>ViewList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewList.aspx.designer.cs">
+      <DependentUpon>ViewList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewNewsLetter.aspx.cs">
+      <DependentUpon>ViewNewsLetter.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewNewsLetter.aspx.designer.cs">
+      <DependentUpon>ViewNewsLetter.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewPaymentdetail.aspx.cs">
+      <DependentUpon>ViewPaymentdetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewPaymentdetail.aspx.designer.cs">
+      <DependentUpon>ViewPaymentdetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewPaymentResponse.aspx.cs">
+      <DependentUpon>ViewPaymentResponse.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewPaymentResponse.aspx.designer.cs">
+      <DependentUpon>ViewPaymentResponse.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewVisaInformation.aspx.cs">
+      <DependentUpon>ViewVisaInformation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewVisaInformation.aspx.designer.cs">
+      <DependentUpon>ViewVisaInformation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VisaInformation.aspx.cs">
+      <DependentUpon>VisaInformation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VisaInformation.aspx.designer.cs">
+      <DependentUpon>VisaInformation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VisaQuery.aspx.cs">
+      <DependentUpon>VisaQuery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VisaQuery.aspx.designer.cs">
+      <DependentUpon>VisaQuery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm2.aspx.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm2.aspx.designer.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Form\" />
+    <Folder Include="obj\Debug\TempPE\" />
+    <Folder Include="Styles\" />
+    <Folder Include="TallyExportData\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Account\Web.config" />
+    <Content Include="Site.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BusinessAccessLayer\BusinessAccessLayer.csproj">
+      <Project>{8EE904F2-EC9D-4749-963A-7D9B734B449A}</Project>
+      <Name>BusinessAccessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DomianObjectModel\DomianObjectModel.csproj">
+      <Project>{662FEE30-198E-4EF3-9B77-7C1BEABE6AD6}</Project>
+      <Name>DomianObjectModel</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Default.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AddVisaForm\1066-long stay business-14May2009.pdf" />
+    <Content Include="AddVisaForm\1066-long stay business-15apr2010.pdf" />
+    <Content Include="AddVisaForm\1066-long stay business.pdf" />
+    <Content Include="AddVisaForm\1066-long stay business13dec.pdf" />
+    <Content Include="AddVisaForm\1066-long stay business_old_4Dec12.pdf" />
+    <Content Include="AddVisaForm\1066-long-stay-business.pdf" />
+    <Content Include="AddVisaForm\456-small stay business.pdf" />
+    <Content Include="AddVisaForm\456-small stay business16oct.pdf" />
+    <Content Include="AddVisaForm\456-small stay businessold.pdf" />
+    <Content Include="AddVisaForm\456-small-stay-business-13dec-.pdf" />
+    <Content Include="AddVisaForm\456-small-stay-business-14May2009.pdf" />
+    <Content Include="AddVisaForm\456-small-stay-business.pdf" />
+    <Content Include="AddVisaForm\456-small-stay-business_old_4Dec12.pdf" />
+    <Content Include="AddVisaForm\48R-Tourist-14May2009.pdf" />
+    <Content Include="AddVisaForm\48R-Tourist-15apr2010.pdf" />
+    <Content Include="AddVisaForm\48R-Tourist-old.pdf" />
+    <Content Include="AddVisaForm\48R-Tourist.pdf" />
+    <Content Include="AddVisaForm\48R-Tourist_old_4Dec12.pdf" />
+    <Content Include="AddVisaForm\48R-Tourist1.pdf" />
+    <Content Include="AddVisaForm\876-Transit form24mar.pdf" />
+    <Content Include="AddVisaForm\876-Transit form_old.pdf" />
+    <Content Include="AddVisaForm\876-Transit-14MAy2009.pdf" />
+    <Content Include="AddVisaForm\876-Transit-15apr2010.pdf" />
+    <Content Include="AddVisaForm\876-Transit.pdf" />
+    <Content Include="AddVisaForm\876-Transit13dec-.pdf" />
+    <Content Include="AddVisaForm\876-Transit_old_4Dec12.pdf" />
+    <Content Include="AddVisaForm\876Transit.pdf" />
+    <Content Include="AddVisaForm\929 CHANGE OF PASSPORT DETAIL FORM.pdf.pdf" />
+    <Content Include="AddVisaForm\929 CHANGE OF PASSPORT DETAIL FORM_old.pdf" />
+    <Content Include="AddVisaForm\929CHANGEOFPASSPORTDETAILFORM.pdf" />
+    <Content Include="AddVisaForm\956-Authorisation-14MAy2009.pdf" />
+    <Content Include="AddVisaForm\956-Authorisation-15apr2010.pdf" />
+    <Content Include="AddVisaForm\956-Authorisation.pdf" />
+    <Content Include="AddVisaForm\956-Authorisation13dec-.pdf" />
+    <Content Include="AddVisaForm\956-Authorisation13dec.pdf" />
+    <Content Include="AddVisaForm\956-Authorisation24Mar.pdf" />
+    <Content Include="AddVisaForm\956-Authorisation_old.pdf" />
+    <Content Include="AddVisaForm\956-Authorisation_old_4Dec12.pdf" />
+    <Content Include="AddVisaForm\956Authorisation.pdf" />
+    <Content Include="AddVisaForm\ABOVE-90.pdf" />
+    <Content Include="AddVisaForm\Afganistan.pdf" />
+    <Content Include="AddVisaForm\Afganistan13Sep.pdf" />
+    <Content Include="AddVisaForm\Afganistan2feb2012.pdf" />
+    <Content Include="AddVisaForm\airport_transit.pdf" />
+    <Content Include="AddVisaForm\algeria-09-07-12.pdf" />
+    <Content Include="AddVisaForm\algeria.pdf" />
+    <Content Include="AddVisaForm\algeria_new.pdf" />
+    <Content Include="AddVisaForm\algeria_new1.doc" />
+    <Content Include="AddVisaForm\algeria_new_form.pdf" />
+    <Content Include="AddVisaForm\Algeria_visa_form.rtf" />
+    <Content Include="AddVisaForm\AMEX-AUTHO %281%29.pdf" />
+    <Content Include="AddVisaForm\angola-enclosure.pdf" />
+    <Content Include="AddVisaForm\ANGOLA.PDF" />
+    <Content Include="AddVisaForm\ANNEX C.pdf" />
+    <Content Include="AddVisaForm\appendix-A-Business.pdf" />
+    <Content Include="AddVisaForm\appendix-B-Tourist.pdf" />
+    <Content Include="AddVisaForm\appendix-D.pdf" />
+    <Content Include="AddVisaForm\appendix-D111.pdf" />
+    <Content Include="AddVisaForm\applicationformaruba.pdf" />
+    <Content Include="AddVisaForm\application_detail.pdf" />
+    <Content Include="AddVisaForm\Argentina-03aug.pdf" />
+    <Content Include="AddVisaForm\ARGENTINA-DECLARATION.pdf" />
+    <Content Include="AddVisaForm\Argentina.pdf" />
+    <Content Include="AddVisaForm\Argentina11.pdf" />
+    <Content Include="AddVisaForm\ArgentinaOld040614.pdf" />
+    <Content Include="AddVisaForm\Argentina_new.pdf" />
+    <Content Include="AddVisaForm\Argentina_visa_form.pdf" />
+    <Content Include="AddVisaForm\Armenia-27-09-11.pdf" />
+    <Content Include="AddVisaForm\Armenia.pdf" />
+    <Content Include="AddVisaForm\Australia-Business%281415%29--old.pdf" />
+    <Content Include="AddVisaForm\Australia-Business%281415%29-1-old.pdf" />
+    <Content Include="AddVisaForm\Australia-Business%281415%29-old.pdf" />
+    <Content Include="AddVisaForm\Australia-Business%281415%29.pdf" />
+    <Content Include="AddVisaForm\Australia-Business%281415%2924mar.pdf" />
+    <Content Include="AddVisaForm\Australia-Business%281415%29_old07072014.pdf" />
+    <Content Include="AddVisaForm\Australia-Tourist%281419%29-old.pdf" />
+    <Content Include="AddVisaForm\Australia-Tourist%281419%29.pdf" />
+    <Content Include="AddVisaForm\Australia-Tourist%281419%2924mar.pdf" />
+    <Content Include="AddVisaForm\Australia-Tourist%281419%29_old_07072014.pdf" />
+    <Content Include="AddVisaForm\Australia-TWP%281400%29.pdf" />
+    <Content Include="AddVisaForm\Australia-TWP%281400%2924mar.pdf" />
+    <Content Include="AddVisaForm\Australia-TWP%281400%29_old07072014.pdf" />
+    <Content Include="AddVisaForm\AustraliaBusiness1415.pdf" />
+    <Content Include="AddVisaForm\AustraliaTourist1419.pdf" />
+    <Content Include="AddVisaForm\AustraliaTWP1400.pdf" />
+    <Content Include="AddVisaForm\austria-20may2010.pdf" />
+    <Content Include="AddVisaForm\Austria-authority.pdf" />
+    <Content Include="AddVisaForm\Austria-authority_letter.doc" />
+    <Content Include="AddVisaForm\AUSTRIA-BUSINESS.pdf" />
+    <Content Include="AddVisaForm\AUSTRIA-BUSINESS_old_04april.pdf" />
+    <Content Include="AddVisaForm\austria-diclaration-form.pdf" />
+    <Content Include="AddVisaForm\austria-disclaimer-form.pdf" />
+    <Content Include="AddVisaForm\austria-guarentee-form.pdf" />
+    <Content Include="AddVisaForm\AUSTRIA-INTERNSHIP.pdf" />
+    <Content Include="AddVisaForm\AUSTRIA-Letter_for_Dispatch_of_Passport.doc" />
+    <Content Include="AddVisaForm\austria-old.pdf" />
+    <Content Include="AddVisaForm\AUSTRIA-SPONSORSHIP.pdf" />
+    <Content Include="AddVisaForm\AUSTRIA-TOURIST.pdf" />
+    <Content Include="AddVisaForm\AUSTRIA-TOURIST_old_04april.pdf" />
+    <Content Include="AddVisaForm\AUSTRIA-WORK.pdf" />
+    <Content Include="AddVisaForm\austria.pdf" />
+    <Content Include="AddVisaForm\austria_1apr2010.pdf" />
+    <Content Include="AddVisaForm\austria_23dec2008.pdf" />
+    <Content Include="AddVisaForm\austria_29062010.pdf" />
+    <Content Include="AddVisaForm\AUTHORISATION-LETTER.pdf" />
+    <Content Include="AddVisaForm\AUTHORITY-LETTER-FOR-POLAND-MUM.DOCX" />
+    <Content Include="AddVisaForm\authority-letter.pdf" />
+    <Content Include="AddVisaForm\authorityletter.pdf" />
+    <Content Include="AddVisaForm\AUTHORITY_LETTER_FOR_GERMANY.pdf" />
+    <Content Include="AddVisaForm\AUTHORITY_LETTER_FOR_NETHERLAND.pdf" />
+    <Content Include="AddVisaForm\AUTHORITY_LETTER_OF_GERMANY.doc" />
+    <Content Include="AddVisaForm\Authorization-Letter.pdf" />
+    <Content Include="AddVisaForm\AuthorizationForm.pdf" />
+    <Content Include="AddVisaForm\AuthorizationLetter%281%29-old.pdf" />
+    <Content Include="AddVisaForm\AuthorizationLetter%281%29.pdf" />
+    <Content Include="AddVisaForm\Azarbaycan Visa Form.pdf" />
+    <Content Include="AddVisaForm\Azerbaijan-14-12-2011.pdf" />
+    <Content Include="AddVisaForm\Azerbaijan.pdf" />
+    <Content Include="AddVisaForm\bahamas.pdf" />
+    <Content Include="AddVisaForm\bahamas20-12-11.pdf" />
+    <Content Include="AddVisaForm\BAHRAIN.pdf" />
+    <Content Include="AddVisaForm\bangladesh.pdf" />
+    <Content Include="AddVisaForm\belarus-06-08-13.pdf" />
+    <Content Include="AddVisaForm\belarus.pdf" />
+    <Content Include="AddVisaForm\belarus1.pdf" />
+    <Content Include="AddVisaForm\belarusinvitationformat.pdf" />
+    <Content Include="AddVisaForm\Belgium-1.pdf" />
+    <Content Include="AddVisaForm\belgium-l-form.pdf" />
+    <Content Include="AddVisaForm\Belgium.pdf" />
+    <Content Include="AddVisaForm\Belgium.pdf-old-29-10-12" />
+    <Content Include="AddVisaForm\Belgium12.pdf" />
+    <Content Include="AddVisaForm\Belgium1may2010.pdf" />
+    <Content Include="AddVisaForm\Belgium_Authority_Letter.doc" />
+    <Content Include="AddVisaForm\belize.pdf" />
+    <Content Include="AddVisaForm\BELOW-90.pdf" />
+    <Content Include="AddVisaForm\Benin.pdf" />
+    <Content Include="AddVisaForm\Benin23march.pdf" />
+    <Content Include="AddVisaForm\Benin_New12.pdf" />
+    <Content Include="AddVisaForm\Benin_old.pdf" />
+    <Content Include="AddVisaForm\Blank-DS-160-form.pdf" />
+    <Content Include="AddVisaForm\bolivia_visa_form.pdf" />
+    <Content Include="AddVisaForm\bosnia-30July2009.pdf" />
+    <Content Include="AddVisaForm\bosnia-old.pdf" />
+    <Content Include="AddVisaForm\bosnia.pdf" />
+    <Content Include="AddVisaForm\botswana-01-11-11.pdf" />
+    <Content Include="AddVisaForm\botswana.pdf" />
+    <Content Include="AddVisaForm\Brazil-emp-undertaking.pdf" />
+    <Content Include="AddVisaForm\Brazil-INDIA-national.pdf" />
+    <Content Include="AddVisaForm\Brazil-US-national.pdf" />
+    <Content Include="AddVisaForm\brazil.doc" />
+    <Content Include="AddVisaForm\Brazil.pdf" />
+    <Content Include="AddVisaForm\Brunei.pdf" />
+    <Content Include="AddVisaForm\BULGARIA.pdf" />
+    <Content Include="AddVisaForm\BULGARIAN-INVITATION-FORM.pdf" />
+    <Content Include="AddVisaForm\burandi_visa_form.pdf" />
+    <Content Include="AddVisaForm\Burkina Faso-14march.pdf" />
+    <Content Include="AddVisaForm\Burkina Faso-old.pdf" />
+    <Content Include="AddVisaForm\Burkina Faso.pdf" />
+    <Content Include="AddVisaForm\burundi_visa_form.doc" />
+    <Content Include="AddVisaForm\BUSINESS-&amp;-TOURIST-VISA-FORM-INZ1017-NEW.pdf" />
+    <Content Include="AddVisaForm\BUSINESS-&amp;-TOURIST-VISA-FORM-INZ1017.pdf" />
+    <Content Include="AddVisaForm\business-gr.pdf" />
+    <Content Include="AddVisaForm\Business_Visa_Checklist.doc" />
+    <Content Include="AddVisaForm\BUSINESS_VISA_CHECKLIST.pdf" />
+    <Content Include="AddVisaForm\Business_Visa_Checklist_New.doc" />
+    <Content Include="AddVisaForm\Business_Visa_Checklist_New.docx" />
+    <Content Include="AddVisaForm\cambodia-form-old.pdf" />
+    <Content Include="AddVisaForm\cambodia-form.pdf" />
+    <Content Include="AddVisaForm\cambodia-form_13jan2009.pdf" />
+    <Content Include="AddVisaForm\Cambodia_31jul06.pdf" />
+    <Content Include="AddVisaForm\CANADA NEW TRV FORM %28IMM5257E%29.pdf" />
+    <Content Include="AddVisaForm\CANADA NEW TRV FORM %28IMM5257E%29old.pdf" />
+    <Content Include="AddVisaForm\Canada Travellor Form.pdf" />
+    <Content Include="AddVisaForm\CANADA-FAMILY-SHEET-FORM.pdf" />
+    <Content Include="AddVisaForm\canada-family-sheet.pdf" />
+    <Content Include="AddVisaForm\canada-family-sheet1.pdf" />
+    <Content Include="AddVisaForm\CANADA-TRV-NEW-FORM1.pdf" />
+    <Content Include="AddVisaForm\canada_tourist_form.pdf" />
+    <Content Include="AddVisaForm\cape_verde-visa-form.pdf" />
+    <Content Include="AddVisaForm\CENTRES.pdf" />
+    <Content Include="AddVisaForm\chad-visa-form.pdf" />
+    <Content Include="AddVisaForm\ChecklistBusiness.pdf" />
+    <Content Include="AddVisaForm\ChecklistTourist.pdf" />
+    <Content Include="AddVisaForm\chennai-visa-form.pdf" />
+    <Content Include="AddVisaForm\CHENNAI_COURIER_SMS_REQUEST_FORM.pdf" />
+    <Content Include="AddVisaForm\children_dependent_visa_chklst.pdf" />
+    <Content Include="AddVisaForm\chile-visa-form.doc" />
+    <Content Include="AddVisaForm\Chile.pdf" />
+    <Content Include="AddVisaForm\CHILEauth.doc" />
+    <Content Include="AddVisaForm\China Medical form.pdf" />
+    <Content Include="AddVisaForm\china-2-new.pdf" />
+    <Content Include="AddVisaForm\china-2-new111.pdf" />
+    <Content Include="AddVisaForm\china-2.pdf" />
+    <Content Include="AddVisaForm\china-29-08-13.pdf" />
+    <Content Include="AddVisaForm\china-medical-02-11-2011.pdf" />
+    <Content Include="AddVisaForm\china-medical.pdf" />
+    <Content Include="AddVisaForm\china-new.pdf" />
+    <Content Include="AddVisaForm\china14-nov.pdf" />
+    <Content Include="AddVisaForm\Chkist-Business.doc" />
+    <Content Include="AddVisaForm\Chkist-Business1.doc" />
+    <Content Include="AddVisaForm\Chkist-BusinessOld180414.doc" />
+    <Content Include="AddVisaForm\Chklst-Family.doc" />
+    <Content Include="AddVisaForm\Chklst-Family1.doc" />
+    <Content Include="AddVisaForm\Chklst-FamilyOld180414.doc" />
+    <Content Include="AddVisaForm\Chklst-Study.doc" />
+    <Content Include="AddVisaForm\Chklst-Study1.doc" />
+    <Content Include="AddVisaForm\Chklst-Tourist.doc" />
+    <Content Include="AddVisaForm\Chklst-Tourist1.doc" />
+    <Content Include="AddVisaForm\Chklst-TouristOld180414.doc" />
+    <Content Include="AddVisaForm\Chklst-Work.doc" />
+    <Content Include="AddVisaForm\Chklst-Work1.doc" />
+    <Content Include="AddVisaForm\Colombia Documents requirements.pdf" />
+    <Content Include="AddVisaForm\Colombia work permit.pdf" />
+    <Content Include="AddVisaForm\Columbia - Onlining Guidelines in English.pdf" />
+    <Content Include="AddVisaForm\columbia-16-11-2011.pdf" />
+    <Content Include="AddVisaForm\Columbia-auth-old.pdf" />
+    <Content Include="AddVisaForm\Columbia-auth.pdf" />
+    <Content Include="AddVisaForm\columbia.pdf" />
+    <Content Include="AddVisaForm\Company-Support-Letter.pdf" />
+    <Content Include="AddVisaForm\Congo.pdf" />
+    <Content Include="AddVisaForm\CONSENT-FORM.pdf" />
+    <Content Include="AddVisaForm\Consent.pdf" />
+    <Content Include="AddVisaForm\Consent1.pdf" />
+    <Content Include="AddVisaForm\Consent129Mar.pdf" />
+    <Content Include="AddVisaForm\consent_form_101113.pdf" />
+    <Content Include="AddVisaForm\costarica.pdf" />
+    <Content Include="AddVisaForm\costarica1.pdf" />
+    <Content Include="AddVisaForm\costarica18March.pdf" />
+    <Content Include="AddVisaForm\costarica_old_05april.pdf" />
+    <Content Include="AddVisaForm\COURIER_SMS_REQUEST_FORM.pdf" />
+    <Content Include="AddVisaForm\Croatia Invitation Format-21july2008.pdf" />
+    <Content Include="AddVisaForm\Croatia Invitation Format.pdf" />
+    <Content Include="AddVisaForm\Croatia Sponsership Format-21july2008.pdf" />
+    <Content Include="AddVisaForm\Croatia Sponsership Format.pdf" />
+    <Content Include="AddVisaForm\croatia-form-21july2008.pdf" />
+    <Content Include="AddVisaForm\croatia-form-new.pdf" />
+    <Content Include="AddVisaForm\croatia-form_14_03_2013.pdf" />
+    <Content Include="AddVisaForm\Croatia.pdf" />
+    <Content Include="AddVisaForm\csharp_tutorial.pdf" />
+    <Content Include="AddVisaForm\CUBA-EFFIDEVIT-TOURIST-VISAS.pdf" />
+    <Content Include="AddVisaForm\CUBA.pdf" />
+    <Content Include="AddVisaForm\CUBA_21sep2010.PDF" />
+    <Content Include="AddVisaForm\Cyprus Sponsership form.pdf" />
+    <Content Include="AddVisaForm\Cyprus-visa.pdf" />
+    <Content Include="AddVisaForm\Cyprus.pdf" />
+    <Content Include="AddVisaForm\Cyprus_new_visa.pdf" />
+    <Content Include="AddVisaForm\CZECH-1.pdf" />
+    <Content Include="AddVisaForm\CZECH-DECLARE.pdf" />
+    <Content Include="AddVisaForm\Czech-long-term-visa-form.pdf" />
+    <Content Include="AddVisaForm\czech-old.pdf" />
+    <Content Include="AddVisaForm\CZECH.pdf" />
+    <Content Include="AddVisaForm\czechold.pdf" />
+    <Content Include="AddVisaForm\Czech_Authority_Letter.doc" />
+    <Content Include="AddVisaForm\Danish-supp.pdf" />
+    <Content Include="AddVisaForm\Danishwp-corp-AR5.pdf" />
+    <Content Include="AddVisaForm\Danishwp-sal.pdf" />
+    <Content Include="AddVisaForm\Danishwp-selfemp.pdf" />
+    <Content Include="AddVisaForm\DEC-FOR-SWISS-01-11-11.pdf" />
+    <Content Include="AddVisaForm\DEC-FOR-SWISS.pdf" />
+    <Content Include="AddVisaForm\Declaration-medical-travel-insurance.pdf" />
+    <Content Include="AddVisaForm\Declaration.pdf" />
+    <Content Include="AddVisaForm\Declaration_250313.pdf" />
+    <Content Include="AddVisaForm\DENMARK-WORK-old.pdf" />
+    <Content Include="AddVisaForm\Denmark-work.pdf" />
+    <Content Include="AddVisaForm\DENMARK.pdf" />
+    <Content Include="AddVisaForm\denmark1-old.pdf" />
+    <Content Include="AddVisaForm\Denmark_Authority_Letter.doc" />
+    <Content Include="AddVisaForm\denmark_new.pdf" />
+    <Content Include="AddVisaForm\denmark1.pdf" />
+    <Content Include="AddVisaForm\DEPENDENT-VISA-FORM.pdf" />
+    <Content Include="AddVisaForm\disclaimer-form-27-july-13.pdf" />
+    <Content Include="AddVisaForm\disclaimer-form-latvia.pdf" />
+    <Content Include="AddVisaForm\disclaimer-form.pdf" />
+    <Content Include="AddVisaForm\Djibouti.pdf" />
+    <Content Include="AddVisaForm\DocCheckL_Family_reunification_en.doc" />
+    <Content Include="AddVisaForm\DocCheckL_Family_reunification_en1.doc" />
+    <Content Include="AddVisaForm\DOMINICAN-FORM.pdf" />
+    <Content Include="AddVisaForm\DS-0157-supplement nonimegrant.pdf" />
+    <Content Include="AddVisaForm\DS-160-1-Questionair.pdf" />
+    <Content Include="AddVisaForm\DS156-nonimegrant visa form.pdf" />
+    <Content Include="AddVisaForm\ds_160_step_by_step_guide-1.pdf" />
+    <Content Include="AddVisaForm\Dubai-Marhaba-Visa-Form.pdf" />
+    <Content Include="AddVisaForm\Dubai.pdf" />
+    <Content Include="AddVisaForm\Ecuador visa form-28-03-11.pdf" />
+    <Content Include="AddVisaForm\Ecuador visa form.pdf" />
+    <Content Include="AddVisaForm\Egypt.pdf" />
+    <Content Include="AddVisaForm\Egypt_New.pdf" />
+    <Content Include="AddVisaForm\EKtkt.pdf" />
+    <Content Include="AddVisaForm\EKtkt_10Feb2009.pdf" />
+    <Content Include="AddVisaForm\elsvodre.pdf" />
+    <Content Include="AddVisaForm\Employement_Certificate.pdf" />
+    <Content Include="AddVisaForm\Employer_Supplementary_form_INZ1113.pdf" />
+    <Content Include="AddVisaForm\entry-visa-new.pdf" />
+    <Content Include="AddVisaForm\entryvisa.pdf" />
+    <Content Include="AddVisaForm\entryvisa1may2010.pdf" />
+    <Content Include="AddVisaForm\entryvisa5may2010.pdf" />
+    <Content Include="AddVisaForm\Eritrea.pdf" />
+    <Content Include="AddVisaForm\estonia-declaration-form.pdf" />
+    <Content Include="AddVisaForm\estonia-disclaimer-form.pdf" />
+    <Content Include="AddVisaForm\Estonia-inv.pdf" />
+    <Content Include="AddVisaForm\Estonia.pdf" />
+    <Content Include="AddVisaForm\Estonia_24062010.pdf" />
+    <Content Include="AddVisaForm\Estonia_Authorization_Letter.doc" />
+    <Content Include="AddVisaForm\ETHIOPIA.pdf" />
+    <Content Include="AddVisaForm\ETHIOPIA_New.pdf" />
+    <Content Include="AddVisaForm\ETHIOPIA_New1.pdf" />
+    <Content Include="AddVisaForm\Familydetails-Visit.pdf" />
+    <Content Include="AddVisaForm\finaland-new1pdf.pdf" />
+    <Content Include="AddVisaForm\Finland work permit-old.pdf" />
+    <Content Include="AddVisaForm\Finland work permit.pdf" />
+    <Content Include="AddVisaForm\finland-business.pdf" />
+    <Content Include="AddVisaForm\finland-business1.pdf" />
+    <Content Include="AddVisaForm\finland-new.pdf" />
+    <Content Include="AddVisaForm\finland-new1.pdf" />
+    <Content Include="AddVisaForm\Finland-old.pdf" />
+    <Content Include="AddVisaForm\finland-tourist-1.pdf" />
+    <Content Include="AddVisaForm\finland-tourist.pdf" />
+    <Content Include="AddVisaForm\finland-work.pdf" />
+    <Content Include="AddVisaForm\FINLAND.PDF" />
+    <Content Include="AddVisaForm\Finland_Authority_Letter.doc" />
+    <Content Include="AddVisaForm\form-V32A.pdf" />
+    <Content Include="AddVisaForm\form-V32A_old_07072014.pdf" />
+    <Content Include="AddVisaForm\Form956.pdf" />
+    <Content Include="AddVisaForm\FORMULARIO_SOLICTUD_DE_VISAS.PDF" />
+    <Content Include="AddVisaForm\FR-MEXICO-27mar2009.pdf" />
+    <Content Include="AddVisaForm\FR-MEXICO.pdf" />
+    <Content Include="AddVisaForm\FR-MEXICO1.pdf" />
+    <Content Include="AddVisaForm\FR-MEXICO2.pdf" />
+    <Content Include="AddVisaForm\FR-MEXICO_9feb2009.pdf" />
+    <Content Include="AddVisaForm\France-1.pdf" />
+    <Content Include="AddVisaForm\France-declaration.pdf" />
+    <Content Include="AddVisaForm\France-declaration_10-12-12.pdf" />
+    <Content Include="AddVisaForm\france-disclaimer.pdf" />
+    <Content Include="AddVisaForm\France-Letter_for_Dispatch_of_Passport.doc" />
+    <Content Include="AddVisaForm\france-undertaking.pdf" />
+    <Content Include="AddVisaForm\France.pdf" />
+    <Content Include="AddVisaForm\France_Authority_Letter.doc" />
+    <Content Include="AddVisaForm\FRANCE_DECLARATION__10MAY.pdf" />
+    <Content Include="AddVisaForm\France_Long.pdf" />
+    <Content Include="AddVisaForm\France_Short.pdf" />
+    <Content Include="AddVisaForm\gabon-1.pdf" />
+    <Content Include="AddVisaForm\gabon-18-10-12.pdf" />
+    <Content Include="AddVisaForm\gabon.pdf" />
+    <Content Include="AddVisaForm\gabon_13May2009.pdf" />
+    <Content Include="AddVisaForm\Gambia.pdf" />
+    <Content Include="AddVisaForm\Georgia-new-Old.pdf" />
+    <Content Include="AddVisaForm\Georgia-new.pdf" />
+    <Content Include="AddVisaForm\Georgia-old.pdf" />
+    <Content Include="AddVisaForm\Georgia.pdf" />
+    <Content Include="AddVisaForm\German-1.pdf" />
+    <Content Include="AddVisaForm\German.pdf" />
+    <Content Include="AddVisaForm\Germany Residence visa.pdf" />
+    <Content Include="AddVisaForm\germany-ab.pdf" />
+    <Content Include="AddVisaForm\germany-bl.pdf" />
+    <Content Include="AddVisaForm\Ghana.pdf" />
+    <Content Include="AddVisaForm\Greece-long-term-1.pdf" />
+    <Content Include="AddVisaForm\Greece-long-term-27-july-13.pdf" />
+    <Content Include="AddVisaForm\Greece-long-term.pdf" />
+    <Content Include="AddVisaForm\Greece-short-term-1.pdf" />
+    <Content Include="AddVisaForm\Greece-short-term.pdf" />
+    <Content Include="AddVisaForm\Greece.pdf" />
+    <Content Include="AddVisaForm\Greece_Authority Letter.doc" />
+    <Content Include="AddVisaForm\Guarantee letter-business visit.pdf" />
+    <Content Include="AddVisaForm\guatmala-18nov.pdf" />
+    <Content Include="AddVisaForm\guatmala.pdf" />
+    <Content Include="AddVisaForm\guest_scientists.pdf" />
+    <Content Include="AddVisaForm\GUINEA.pdf" />
+    <Content Include="AddVisaForm\GUYANA.pdf" />
+    <Content Include="AddVisaForm\GUYANA1.pdf" />
+    <Content Include="AddVisaForm\GUYANA11.pdf" />
+    <Content Include="AddVisaForm\GUYANANew.pdf" />
+    <Content Include="AddVisaForm\GUYANA_OLD.pdf" />
+    <Content Include="AddVisaForm\HEALTHINSURANCE.pdf" />
+    <Content Include="AddVisaForm\honduras.pdf" />
+    <Content Include="AddVisaForm\Hong-kong-8Dec2009.pdf" />
+    <Content Include="AddVisaForm\Hong-kong.pdf" />
+    <Content Include="AddVisaForm\HowtoapplyforVisa.pdf" />
+    <Content Include="AddVisaForm\Hungary Long Term.pdf" />
+    <Content Include="AddVisaForm\hungary-1.pdf" />
+    <Content Include="AddVisaForm\Hungary-1111.pdf" />
+    <Content Include="AddVisaForm\hungary-declaration-form.pdf" />
+    <Content Include="AddVisaForm\Hungary Short Term.pdf" />
+    <Content Include="AddVisaForm\Hungary_Authority_Letter.doc" />
+    <Content Include="AddVisaForm\hungary_work_permit.pdf" />
+    <Content Include="AddVisaForm\ICELAND.pdf" />
+    <Content Include="AddVisaForm\IMM1295B-WORK-OLD-150414.pdf" />
+    <Content Include="AddVisaForm\IMM1295B-WORK.pdf" />
+    <Content Include="AddVisaForm\IMM1295B-WORK1.pdf" />
+    <Content Include="AddVisaForm\IMM1295B-WORK_OLD_15Sep_12.pdf" />
+    <Content Include="AddVisaForm\IMM5257B-RESIDANT.pdf" />
+    <Content Include="AddVisaForm\IMM5257B-RESIDANT_18oct2010.pdf" />
+    <Content Include="AddVisaForm\IMM5257B-RESIDANT_old_15_sep_12.pdf" />
+    <Content Include="AddVisaForm\INDONESIA VISA FORM.pdf" />
+    <Content Include="AddVisaForm\INDONESIA-30-09-11.pdf" />
+    <Content Include="AddVisaForm\INDONESIA-old.pdf" />
+    <Content Include="AddVisaForm\INDONESIA-VISA.pdf" />
+    <Content Include="AddVisaForm\INDONESIA-VISA_NEW.pdf" />
+    <Content Include="AddVisaForm\INDONESIA.pdf-wrong-11-11-11" />
+    <Content Include="AddVisaForm\INDONESIA_05072010.pdf" />
+    <Content Include="AddVisaForm\INDONESIA_21sep2010.pdf" />
+    <Content Include="AddVisaForm\indonesia_new.pdf" />
+    <Content Include="AddVisaForm\INDONESIA_VISAFORM.pdf" />
+    <Content Include="AddVisaForm\INSURANCE_DECLARATION.pdf" />
+    <Content Include="AddVisaForm\Iran.doc" />
+    <Content Include="AddVisaForm\Iran.pdf" />
+    <Content Include="AddVisaForm\Iran1.pdf" />
+    <Content Include="AddVisaForm\iraq-mf.pdf" />
+    <Content Include="AddVisaForm\Iraq.pdf" />
+    <Content Include="AddVisaForm\Iraq1.pdf" />
+    <Content Include="AddVisaForm\Iraq_10-12-12.pdf" />
+    <Content Include="AddVisaForm\Iraq_Old_4Dec12.pdf" />
+    <Content Include="AddVisaForm\IRELAND-old.pdf" />
+    <Content Include="AddVisaForm\IRELAND.pdf" />
+    <Content Include="AddVisaForm\Ireland_Authority_Letter.doc" />
+    <Content Include="AddVisaForm\Israel - Authority Letter.docx" />
+    <Content Include="AddVisaForm\Israel - Business %28checklist%29.pdf" />
+    <Content Include="AddVisaForm\Israel - Tourist %28checklist%29.pdf" />
+    <Content Include="AddVisaForm\Israel-authority-letter.doc" />
+    <Content Include="AddVisaForm\Israel-AuthorityLetter.docx" />
+    <Content Include="AddVisaForm\ISRAEL.PDF" />
+    <Content Include="AddVisaForm\ISRAEL_Visa_Form.pdf" />
+    <Content Include="AddVisaForm\Italy-1.pdf" />
+    <Content Include="AddVisaForm\Italy-Long.pdf" />
+    <Content Include="AddVisaForm\Italy-Short.pdf" />
+    <Content Include="AddVisaForm\Italy.pdf" />
+    <Content Include="AddVisaForm\Italy_1apr2010.pdf" />
+    <Content Include="AddVisaForm\Italy_Authority_Letter.doc" />
+    <Content Include="AddVisaForm\IVORYCOST.pdf" />
+    <Content Include="AddVisaForm\JAMAICA.PDF" />
+    <Content Include="AddVisaForm\Japan.pdf" />
+    <Content Include="AddVisaForm\Japan1.pdf" />
+    <Content Include="AddVisaForm\Japan_old.pdf" />
+    <Content Include="AddVisaForm\Jordan.pdf" />
+    <Content Include="AddVisaForm\Kazakhstan.pdf" />
+    <Content Include="AddVisaForm\Kenya.pdf" />
+    <Content Include="AddVisaForm\Kenya1.pdf" />
+    <Content Include="AddVisaForm\Koria%28south%29-New.pdf" />
+    <Content Include="AddVisaForm\Koria%28south%29.pdf" />
+    <Content Include="AddVisaForm\Koria%28south%29_19nov2010.pdf" />
+    <Content Include="AddVisaForm\Koria%28south%29_29sep_2010.pdf" />
+    <Content Include="AddVisaForm\Koria_south_New.pdf" />
+    <Content Include="AddVisaForm\Kuwait.pdf" />
+    <Content Include="AddVisaForm\KYRGYZ-06-12-11.pdf" />
+    <Content Include="AddVisaForm\KYRGYZ-old.PDF" />
+    <Content Include="AddVisaForm\KYRGYZ.pdf" />
+    <Content Include="AddVisaForm\Laos.pdf" />
+    <Content Include="AddVisaForm\latvia-declaration-form.pdf" />
+    <Content Include="AddVisaForm\latvia.pdf" />
+    <Content Include="AddVisaForm\Latvia_Authority_Letter.doc" />
+    <Content Include="AddVisaForm\Lebanon.pdf" />
+    <Content Include="AddVisaForm\Libya.pdf" />
+    <Content Include="AddVisaForm\lisotho-visa.doc" />
+    <Content Include="AddVisaForm\lisotho.pdf" />
+    <Content Include="AddVisaForm\lisotho_visa.pdf" />
+    <Content Include="AddVisaForm\lithuania-visa-form.pdf" />
+    <Content Include="AddVisaForm\Lithuania_Authority_Letter.doc" />
+    <Content Include="AddVisaForm\LONG-STAY-BELGIUM.pdf" />
+    <Content Include="AddVisaForm\LONG-TERM-VISA-FORM-NEW.pdf" />
+    <Content Include="AddVisaForm\LONG-TERM-VISA-FORM-OLD-11-07-2014.pdf" />
+    <Content Include="AddVisaForm\LONG-TERM-VISA-FORM.pdf" />
+    <Content Include="AddVisaForm\luxembourg-disclaimer-form.pdf" />
+    <Content Include="AddVisaForm\luxembourg-l-form.pdf" />
+    <Content Include="AddVisaForm\luxembourg-long-stay-visa-form-new.pdf" />
+    <Content Include="AddVisaForm\luxembourg-long-stay-visa-form.pdf" />
+    <Content Include="AddVisaForm\Luxembourg-old.pdf" />
+    <Content Include="AddVisaForm\Luxembourg.pdf" />
+    <Content Include="AddVisaForm\Luxembourg.pdf-old-29-10-12" />
+    <Content Include="AddVisaForm\Luxembourg041110.pdf" />
+    <Content Include="AddVisaForm\Luxembourg_24062010.pdf" />
+    <Content Include="AddVisaForm\Luxembourg_Authority_Letter.doc" />
+    <Content Include="AddVisaForm\M67-FAMILY SHEET-13 dec.pdf" />
+    <Content Include="AddVisaForm\M67-FAMILY SHEET-15apr2010.pdf" />
+    <Content Include="AddVisaForm\M67-FAMILY SHEET.pdf" />
+    <Content Include="AddVisaForm\M67-FAMILY SHEET_old_4Dec12.pdf" />
+    <Content Include="AddVisaForm\M67-FAMILY-SHEET.pdf" />
+    <Content Include="AddVisaForm\Macedonia-26may2009.pdf" />
+    <Content Include="AddVisaForm\Macedonia.pdf" />
+    <Content Include="AddVisaForm\Madagascar_recto.pdf" />
+    <Content Include="AddVisaForm\Madagascar_verso.pdf" />
+    <Content Include="AddVisaForm\MALAWI.PDF" />
+    <Content Include="AddVisaForm\malaysia-New.pdf" />
+    <Content Include="AddVisaForm\malaysia.pdf" />
+    <Content Include="AddVisaForm\malaysia1.pdf" />
+    <Content Include="AddVisaForm\malaysia_11_03_2013.pdf" />
+    <Content Include="AddVisaForm\malaysia_22sep2010.pdf" />
+    <Content Include="AddVisaForm\malaysia_form.pdf" />
+    <Content Include="AddVisaForm\Malta-old.pdf" />
+    <Content Include="AddVisaForm\Malta.pdf" />
+    <Content Include="AddVisaForm\Malta4june2010.pdf" />
+    <Content Include="AddVisaForm\Malta_Authority_Letter.doc" />
+    <Content Include="AddVisaForm\Mauritius.pdf" />
+    <Content Include="AddVisaForm\MEDICAL-CERTIFICATE.pdf" />
+    <Content Include="AddVisaForm\MEDICAL-DECLARATION-FORM.pdf" />
+    <Content Include="AddVisaForm\MEDICAL-DECLARATION-FORM1.pdf" />
+    <Content Include="AddVisaForm\Mexico-Business.pdf" />
+    <Content Include="AddVisaForm\Mexico-old-10-NOV-2012.pdf" />
+    <Content Include="AddVisaForm\Mexico-old-23-march-11.pdf" />
+    <Content Include="AddVisaForm\Mexico-Tourist.pdf" />
+    <Content Include="AddVisaForm\Mexico.pdf" />
+    <Content Include="AddVisaForm\Mexico_29_11_12_Old.pdf" />
+    <Content Include="AddVisaForm\Mexico_old.pdf" />
+    <Content Include="AddVisaForm\Moldova.pdf" />
+    <Content Include="AddVisaForm\Mongolia.pdf" />
+    <Content Include="AddVisaForm\Mongolia_business.pdf" />
+    <Content Include="AddVisaForm\Mongolia_old.pdf" />
+    <Content Include="AddVisaForm\Mongolia_tourist.pdf" />
+    <Content Include="AddVisaForm\Morocco-22Apr2009.pdf" />
+    <Content Include="AddVisaForm\Morocco-new.pdf" />
+    <Content Include="AddVisaForm\Morocco.pdf" />
+    <Content Include="AddVisaForm\Morocco1.pdf" />
+    <Content Include="AddVisaForm\Morocco12.pdf" />
+    <Content Include="AddVisaForm\Mozambique.pdf" />
+    <Content Include="AddVisaForm\Mozambique1.pdf" />
+    <Content Include="AddVisaForm\Myanmar-Arr-info.pdf" />
+    <Content Include="AddVisaForm\Myanmar-Business.pdf" />
+    <Content Include="AddVisaForm\Myanmar-Business1.pdf" />
+    <Content Include="AddVisaForm\Myanmar-Tourist.pdf" />
+    <Content Include="AddVisaForm\myanmarvisaform.pdf" />
+    <Content Include="AddVisaForm\Namibia.pdf" />
+    <Content Include="AddVisaForm\nepal-old.pdf" />
+    <Content Include="AddVisaForm\nepal.pdf" />
+    <Content Include="AddVisaForm\netherland-attestation-form.pdf" />
+    <Content Include="AddVisaForm\NETHERLAND.pdf" />
+    <Content Include="AddVisaForm\Netherlands Antilles Visa Form.pdf" />
+    <Content Include="AddVisaForm\Netherlands-1.pdf" />
+    <Content Include="AddVisaForm\Netherlands-30apr2010.pdf" />
+    <Content Include="AddVisaForm\Netherlands-old.pdf" />
+    <Content Include="AddVisaForm\Netherlands.pdf" />
+    <Content Include="AddVisaForm\NETHERLANDS_ANTILLES.pdf" />
+    <Content Include="AddVisaForm\Netherlands_Authority_Letter.doc" />
+    <Content Include="AddVisaForm\New Botswana Visa Form on 01.11.2011.pdf" />
+    <Content Include="AddVisaForm\newzealand familysheet.pdf" />
+    <Content Include="AddVisaForm\Newzeland Study.pdf" />
+    <Content Include="AddVisaForm\Newzeland Transit.pdf" />
+    <Content Include="AddVisaForm\Nicaragua.pdf" />
+    <Content Include="AddVisaForm\NIGER-VISA-FORM.pdf" />
+    <Content Include="AddVisaForm\NIGER-VISA-FORM_Old.pdf" />
+    <Content Include="AddVisaForm\Nigeria.pdf" />
+    <Content Include="AddVisaForm\Nigeria_old.pdf" />
+    <Content Include="AddVisaForm\NONEKTKT.pdf" />
+    <Content Include="AddVisaForm\NonSettlementVisaForm.pdf" />
+    <Content Include="AddVisaForm\NorthKorea.pdf" />
+    <Content Include="AddVisaForm\Norway Additional Form old.pdf" />
+    <Content Include="AddVisaForm\Norway Additional Form.pdf" />
+    <Content Include="AddVisaForm\norway residence or work permit-1.pdf" />
+    <Content Include="AddVisaForm\norway residence or work permit.pdf" />
+    <Content Include="AddVisaForm\NORWAY-1.PDF" />
+    <Content Include="AddVisaForm\norway-attorney.pdf" />
+    <Content Include="AddVisaForm\Norway-Authorisation-Letter.pdf" />
+    <Content Include="AddVisaForm\Norway-Authorisation-Letter_25oct2010.pdf" />
+    <Content Include="AddVisaForm\NORWAY.PDF" />
+    <Content Include="AddVisaForm\Norway_Authority_Letter.doc" />
+    <Content Include="AddVisaForm\NORWE-D-FORM.pdf" />
+    <Content Include="AddVisaForm\NZ-Business.pdf" />
+    <Content Include="AddVisaForm\NZ-Business.pdf-old-20-06-13" />
+    <Content Include="AddVisaForm\NZ-Familysheet.pdf" />
+    <Content Include="AddVisaForm\NZ-Familysheet_old_4Dec12.pdf" />
+    <Content Include="AddVisaForm\NZ-Study-9-12-2011.pdf" />
+    <Content Include="AddVisaForm\NZ-Study.pdf" />
+    <Content Include="AddVisaForm\NZ-Transit.pdf" />
+    <Content Include="AddVisaForm\NZ-Visit-15-10-11.pdf" />
+    <Content Include="AddVisaForm\NZ-Visit-9-12-2011.pdf" />
+    <Content Include="AddVisaForm\NZ-Visit.pdf" />
+    <Content Include="AddVisaForm\NZ-Visit1.pdf" />
+    <Content Include="AddVisaForm\NZ-Visit_old_4Dec12.pdf" />
+    <Content Include="AddVisaForm\NZ-Work-9-12-2011.pdf" />
+    <Content Include="AddVisaForm\NZ-Work.pdf" />
+    <Content Include="AddVisaForm\NZ-Work1.pdf" />
+    <Content Include="AddVisaForm\NZ-Work_old_4Dec12.pdf" />
+    <Content Include="AddVisaForm\nzis1004-residant visa.pdf" />
+    <Content Include="AddVisaForm\nzis1015-work permit.pdf" />
+    <Content Include="AddVisaForm\nzis1017-Tour-Bussi.pdf" />
+    <Content Include="AddVisaForm\old hungary.pdf" />
+    <Content Include="AddVisaForm\OLE1.pdf" />
+    <Content Include="AddVisaForm\OLE2.pdf" />
+    <Content Include="AddVisaForm\OLE3.pdf" />
+    <Content Include="AddVisaForm\OLE4.pdf" />
+    <Content Include="AddVisaForm\ole_op1.doc" />
+    <Content Include="AddVisaForm\ole_ph1.doc" />
+    <Content Include="AddVisaForm\ole_ph4.doc" />
+    <Content Include="AddVisaForm\ole_tut.doc" />
+    <Content Include="AddVisaForm\ole_ty1.doc" />
+    <Content Include="AddVisaForm\ole_ty2.doc" />
+    <Content Include="AddVisaForm\Oman04.pdf" />
+    <Content Include="AddVisaForm\Pakistan-New.pdf" />
+    <Content Include="AddVisaForm\Pakistan-non-indians.pdf" />
+    <Content Include="AddVisaForm\Pakistan-non-indians_29feb.pdf" />
+    <Content Include="AddVisaForm\Pakistan.pdf" />
+    <Content Include="AddVisaForm\PakistanOld08052014.pdf" />
+    <Content Include="AddVisaForm\PAKISTAN_CONFERENCE_VISA_FORM.pdf" />
+    <Content Include="AddVisaForm\Panama-9-12-2011.pdf" />
+    <Content Include="AddVisaForm\Panama-old.pdf" />
+    <Content Include="AddVisaForm\Panama-tourist.pdf" />
+    <Content Include="AddVisaForm\Panama.doc" />
+    <Content Include="AddVisaForm\Panama.pdf" />
+    <Content Include="AddVisaForm\PAPUA NEW GUINEA.pdf" />
+    <Content Include="AddVisaForm\PARAGUAY ONLINE VISA FORM-6may.pdf" />
+    <Content Include="AddVisaForm\PARAGUAY ONLINE VISA FORM.pdf" />
+    <Content Include="AddVisaForm\PARAGUAY ONLINE VISAFORM.pdf" />
+    <Content Include="AddVisaForm\Paraguay.pdf" />
+    <Content Include="AddVisaForm\Paraguay_15sep2010.pdf" />
+    <Content Include="AddVisaForm\Paraguay_new_visa.pdf" />
+    <Content Include="AddVisaForm\PARAGUAY_VISA_FORM.doc" />
+    <Content Include="AddVisaForm\Peru-17June2009.pdf" />
+    <Content Include="AddVisaForm\Peru-27May2009.pdf" />
+    <Content Include="AddVisaForm\Peru-old.pdf" />
+    <Content Include="AddVisaForm\Peru.pdf" />
+    <Content Include="AddVisaForm\ph4_plus.doc" />
+    <Content Include="AddVisaForm\Philippines.doc" />
+    <Content Include="AddVisaForm\Phillipine.pdf" />
+    <Content Include="AddVisaForm\Phillipines Medical visa form.pdf" />
+    <Content Include="AddVisaForm\Phillipines-old.pdf" />
+    <Content Include="AddVisaForm\Phillipines-old1.pdf" />
+    <Content Include="AddVisaForm\Phillipines.pdf" />
+    <Content Include="AddVisaForm\pk4_plus.doc" />
+    <Content Include="AddVisaForm\pk_1 plus.doc" />
+    <Content Include="AddVisaForm\PNG_Health_Form.pdf" />
+    <Content Include="AddVisaForm\POLAND.PDF" />
+    <Content Include="AddVisaForm\Poland1.pdf" />
+    <Content Include="AddVisaForm\Poland_Authority_Letter.doc" />
+    <Content Include="AddVisaForm\Poland_long_term.pdf" />
+    <Content Include="AddVisaForm\Poland_long_term_21sep2010.pdf" />
+    <Content Include="AddVisaForm\Poland_short_term-1.pdf" />
+    <Content Include="AddVisaForm\Poland_short_term.pdf" />
+    <Content Include="AddVisaForm\Portland-Medical-disclaimer-form.pdf" />
+    <Content Include="AddVisaForm\PORTUGAL.PDF" />
+    <Content Include="AddVisaForm\PORTUGAL1.PDF" />
+    <Content Include="AddVisaForm\Portugal_Authority_Letter.doc" />
+    <Content Include="AddVisaForm\power-of-attorney-swden.pdf" />
+    <Content Include="AddVisaForm\PowerOfAttorney_101213.pdf" />
+    <Content Include="AddVisaForm\Questionaire_Business_Visa.doc" />
+    <Content Include="AddVisaForm\questionary C-visa.doc" />
+    <Content Include="AddVisaForm\Questionnaire_for_Tourist_and_Visit_Visa.doc" />
+    <Content Include="AddVisaForm\RADIOLOGICAL-S-AFRICA-NEW.pdf" />
+    <Content Include="AddVisaForm\republic-of-congo-visa-form.pdf" />
+    <Content Include="AddVisaForm\republic-of-congo-visa-form_New.pdf" />
+    <Content Include="AddVisaForm\republic-of-congo-visa-form_old.pdf" />
+    <Content Include="AddVisaForm\re_entry_permit_form.docx" />
+    <Content Include="AddVisaForm\re_entry_permit_form.pdf" />
+    <Content Include="AddVisaForm\ROMANIA-BUSINESS_VISA_CHECKLIST.pdf" />
+    <Content Include="AddVisaForm\romania-form-17June2009.pdf" />
+    <Content Include="AddVisaForm\romania-form.pdf" />
+    <Content Include="AddVisaForm\romania-form1.pdf" />
+    <Content Include="AddVisaForm\ROMANIA-TOURIST_VISA_CHECKLIST.pdf" />
+    <Content Include="AddVisaForm\romania-work.pdf" />
+    <Content Include="AddVisaForm\Romania.pdf" />
+    <Content Include="AddVisaForm\Russia-27Mar2009.pdf" />
+    <Content Include="AddVisaForm\Russia.pdf" />
+    <Content Include="AddVisaForm\Russia7may2010.pdf" />
+    <Content Include="AddVisaForm\Russia_10dec2008.pdf" />
+    <Content Include="AddVisaForm\Russia_old.pdf" />
+    <Content Include="AddVisaForm\rwanda.pdf" />
+    <Content Include="AddVisaForm\Rwanda_all.pdf" />
+    <Content Include="AddVisaForm\Rwanda_allOld040614.pdf" />
+    <Content Include="AddVisaForm\Rwanda_all_9jun2010.pdf" />
+    <Content Include="AddVisaForm\Rwanda_all_New.pdf" />
+    <Content Include="AddVisaForm\SA-powerofattorney.pdf" />
+    <Content Include="AddVisaForm\safrica-tourist.pdf" />
+    <Content Include="AddVisaForm\safrica.pdf" />
+    <Content Include="AddVisaForm\safrica2-tourist.pdf" />
+    <Content Include="AddVisaForm\sample-ds-160-form-us-visa-application-1.pdf" />
+    <Content Include="AddVisaForm\saudi-medical.docx" />
+    <Content Include="AddVisaForm\saudi-medical.pdf" />
+    <Content Include="AddVisaForm\saudi.pdf" />
+    <Content Include="AddVisaForm\saudi1.pdf" />
+    <Content Include="AddVisaForm\SCHENGEN-LIST-OF-TRAVEL-INSURANCE-COMPANIES-New.pdf" />
+    <Content Include="AddVisaForm\SCHENGEN-LIST-OF-TRAVEL-INSURANCE-COMPANIES.pdf" />
+    <Content Include="AddVisaForm\SCHENGENLISTOFTRAVELINSURANCECOMPANIES-New1.pdf" />
+    <Content Include="AddVisaForm\SCHENGENLISTOFTRAVELINSURANCECOMPANIES-New2.pdf" />
+    <Content Include="AddVisaForm\SelfDeclarationForm.pdf" />
+    <Content Include="AddVisaForm\Senegal.pdf" />
+    <Content Include="AddVisaForm\Senegal_29july2010.pdf" />
+    <Content Include="AddVisaForm\Senegal_new_visa.pdf" />
+    <Content Include="AddVisaForm\SettlementVisaForm.pdf" />
+    <Content Include="AddVisaForm\SHORT-TERM-VISA-FORM-12-12-2011.pdf" />
+    <Content Include="AddVisaForm\SHORT-TERM-VISA-FORM-28-06-14.pdf" />
+    <Content Include="AddVisaForm\SHORT-TERM-VISA-FORM.pdf" />
+    <Content Include="AddVisaForm\SHORT-TERM-VISA-FORM_NEW.pdf" />
+    <Content Include="AddVisaForm\singapore-old.pdf" />
+    <Content Include="AddVisaForm\singapore.pdf" />
+    <Content Include="AddVisaForm\singapore1.pdf" />
+    <Content Include="AddVisaForm\singapore_29oct2008.pdf" />
+    <Content Include="AddVisaForm\singapore_old.pdf" />
+    <Content Include="AddVisaForm\Slovakia-12apr-2010.pdf" />
+    <Content Include="AddVisaForm\Slovakia-6Apr2009.pdf" />
+    <Content Include="AddVisaForm\Slovakia.pdf" />
+    <Content Include="AddVisaForm\Slovakia_22062010.pdf" />
+    <Content Include="AddVisaForm\Slovak_Authority_Letter.doc" />
+    <Content Include="AddVisaForm\SlovENIA.pdf" />
+    <Content Include="AddVisaForm\SlovENIA_29jul2010.pdf" />
+    <Content Include="AddVisaForm\Slovenia_Authority_Letter.doc" />
+    <Content Include="AddVisaForm\SLOVENIA_DECLARATION_FORM.pdf" />
+    <Content Include="AddVisaForm\SouthKorea.pdf" />
+    <Content Include="AddVisaForm\South_Sudan.pdf" />
+    <Content Include="AddVisaForm\SPAIN-old.PDF" />
+    <Content Include="AddVisaForm\SPAIN.pdf" />
+    <Content Include="AddVisaForm\SPAINLETTER.pdf" />
+    <Content Include="AddVisaForm\Spain_Authority_Letter.doc" />
+    <Content Include="AddVisaForm\SPAIN_NEW.pdf" />
+    <Content Include="AddVisaForm\spanish-authority.pdf" />
+    <Content Include="AddVisaForm\spanish-checklist.pdf" />
+    <Content Include="AddVisaForm\Sponsorship .pdf" />
+    <Content Include="AddVisaForm\spouse_dependent_visa_chklst.pdf" />
+    <Content Include="AddVisaForm\Srilanka-19-01-12.pdf" />
+    <Content Include="AddVisaForm\Srilanka-old.pdf" />
+    <Content Include="AddVisaForm\Srilanka.pdf" />
+    <Content Include="AddVisaForm\Student Applicants Enquiry form.pdf" />
+    <Content Include="AddVisaForm\Student-OLD-150414.pdf" />
+    <Content Include="AddVisaForm\Student.pdf" />
+    <Content Include="AddVisaForm\Student1.pdf" />
+    <Content Include="AddVisaForm\Student_OLD_14_SEP_12.pdf" />
+    <Content Include="AddVisaForm\stvfbusiness.pdf" />
+    <Content Include="AddVisaForm\subjected.pdf" />
+    <Content Include="AddVisaForm\SUDAN.PDF" />
+    <Content Include="AddVisaForm\supplementary.pdf" />
+    <Content Include="AddVisaForm\surinam.pdf" />
+    <Content Include="AddVisaForm\sweden-appendix-E-form.pdf" />
+    <Content Include="AddVisaForm\sweden-appendix-E-form1.pdf" />
+    <Content Include="AddVisaForm\SWEDEN-CONSENT.pdf" />
+    <Content Include="AddVisaForm\Sweden-Dependent.pdf" />
+    <Content Include="AddVisaForm\Sweden_Authority_Letter.doc" />
+    <Content Include="AddVisaForm\swiss-long-term-visa.pdf" />
+    <Content Include="AddVisaForm\Swiss_Authority_Letter.doc" />
+    <Content Include="AddVisaForm\Swiss_Authorization_Form_New.pdf" />
+    <Content Include="AddVisaForm\switzerland-1.pdf" />
+    <Content Include="AddVisaForm\switzerland-1apr-2010.pdf" />
+    <Content Include="AddVisaForm\switzerland.pdf" />
+    <Content Include="AddVisaForm\switzerlandold.pdf" />
+    <Content Include="AddVisaForm\Syria.pdf" />
+    <Content Include="AddVisaForm\Syria25-11-2011.pdf" />
+    <Content Include="AddVisaForm\TAIWAN-13July2009.PDF" />
+    <Content Include="AddVisaForm\Taiwan-medical-form-new.pdf" />
+    <Content Include="AddVisaForm\Taiwan-medical-form.pdf" />
+    <Content Include="AddVisaForm\TAIWAN-old.pdf" />
+    <Content Include="AddVisaForm\TAIWAN.pdf" />
+    <Content Include="AddVisaForm\TAIWAN1.pdf" />
+    <Content Include="AddVisaForm\Tajikistan.pdf" />
+    <Content Include="AddVisaForm\Tanzania.pdf" />
+    <Content Include="AddVisaForm\Tanzaniaold.pdf" />
+    <Content Include="AddVisaForm\Thailand.pdf" />
+    <Content Include="AddVisaForm\Thailand16oct.pdf" />
+    <Content Include="AddVisaForm\Togo.pdf" />
+    <Content Include="AddVisaForm\tourism.1.pdf" />
+    <Content Include="AddVisaForm\tourism.1_1.pdf" />
+    <Content Include="AddVisaForm\TOURIST_VISA_CHECKLIST.pdf" />
+    <Content Include="AddVisaForm\track.jetsavetours.com_site_pdf_ANGOLA.pdf" />
+    <Content Include="AddVisaForm\trade_fair.pdf" />
+    <Content Include="AddVisaForm\Transit.pdf" />
+    <Content Include="AddVisaForm\TransitVisaForm.pdf" />
+    <Content Include="AddVisaForm\Trinidad.pdf" />
+    <Content Include="AddVisaForm\Tunisia Additional Sheet.pdf" />
+    <Content Include="AddVisaForm\Tunisia.pdf" />
+    <Content Include="AddVisaForm\Turkey.pdf" />
+    <Content Include="AddVisaForm\turkey_visa.pdf" />
+    <Content Include="AddVisaForm\turkish.pdf" />
+    <Content Include="AddVisaForm\turkminintan.pdf" />
+    <Content Include="AddVisaForm\Uganda_17_01_13.pdf" />
+    <Content Include="AddVisaForm\Uganda_25sep2008.pdf" />
+    <Content Include="AddVisaForm\Uganda_30062010.pdf" />
+    <Content Include="AddVisaForm\Uganda_new_visa.pdf" />
+    <Content Include="AddVisaForm\UK CHILD VISA FORM.pdf" />
+    <Content Include="AddVisaForm\UK-Business.pdf" />
+    <Content Include="AddVisaForm\UK-Employment-25Mar2009.pdf" />
+    <Content Include="AddVisaForm\UK-Employment.pdf" />
+    <Content Include="AddVisaForm\UK-performa.pdf" />
+    <Content Include="AddVisaForm\UK-performa_new-21nov.pdf" />
+    <Content Include="AddVisaForm\UK-performa_new-25nov.pdf" />
+    <Content Include="AddVisaForm\UK-performa_new-26nov.pdf" />
+    <Content Include="AddVisaForm\UK-performa_new.pdf" />
+    <Content Include="AddVisaForm\UK-Settlement-25Mar2009.pdf" />
+    <Content Include="AddVisaForm\UK-Settlement.pdf" />
+    <Content Include="AddVisaForm\UK-Student-25Mar2009.pdf" />
+    <Content Include="AddVisaForm\UK-Student.pdf" />
+    <Content Include="AddVisaForm\UK-Transit-25MAr2009.pdf" />
+    <Content Include="AddVisaForm\UK-Transit.pdf" />
+    <Content Include="AddVisaForm\uk-visa-form-2006.pdf" />
+    <Content Include="AddVisaForm\UK-visit.pdf" />
+    <Content Include="AddVisaForm\UK-visit_4dec2008.pdf" />
+    <Content Include="AddVisaForm\ukrain-invitation-form.pdf" />
+    <Content Include="AddVisaForm\ukrain-visa-form.pdf" />
+    <Content Include="AddVisaForm\UKRAINE-21-11-2011.pdf" />
+    <Content Include="AddVisaForm\UKRAINE-old.PDF" />
+    <Content Include="AddVisaForm\UKRAINE.pdf" />
+    <Content Include="AddVisaForm\Undertaking-for-Intra-Company-Transfer-Indian-Company.doc" />
+    <Content Include="AddVisaForm\Undertaking-for-Intra-Company-Transfer-South-AFrican-Company.doc" />
+    <Content Include="AddVisaForm\UNDERTAKING-FORM-FOR-DEPENDENT.pdf" />
+    <Content Include="AddVisaForm\undertaking_form_1_2.pdf" />
+    <Content Include="AddVisaForm\Untitled-1.psd" />
+    <Content Include="AddVisaForm\Uruguary.pdf" />
+    <Content Include="AddVisaForm\uruguay.pdf" />
+    <Content Include="AddVisaForm\Uzbekistan1.pdf" />
+    <Content Include="AddVisaForm\Uzbekistan2.pdf" />
+    <Content Include="AddVisaForm\VAF1 2004 NON-SETTLE,T,B,S.pdf" />
+    <Content Include="AddVisaForm\VAF2 - Settlement.pdf" />
+    <Content Include="AddVisaForm\Venejuela-old.pdf" />
+    <Content Include="AddVisaForm\Venejuela.pdf" />
+    <Content Include="AddVisaForm\Venejuela_visaform.pdf" />
+    <Content Include="AddVisaForm\vietnam-old.pdf" />
+    <Content Include="AddVisaForm\vietnam-tourist-undertaking.pdf" />
+    <Content Include="AddVisaForm\vietnam.pdf" />
+    <Content Include="AddVisaForm\Visa Application Form.pdf" />
+    <Content Include="AddVisaForm\Visa Form.doc" />
+    <Content Include="AddVisaForm\Visa-application-form-in-English.pdf" />
+    <Content Include="AddVisaForm\Visa-Dispatch-Note.pdf" />
+    <Content Include="AddVisaForm\visa-form-for-india.doc" />
+    <Content Include="AddVisaForm\visa-form-for-india.pdf" />
+    <Content Include="AddVisaForm\visa-form-for-india_6Feb2009.pdf" />
+    <Content Include="AddVisaForm\visa-form-mali.pdf" />
+    <Content Include="AddVisaForm\visa-form-mali1.pdf" />
+    <Content Include="AddVisaForm\visa-form.pdf" />
+    <Content Include="AddVisaForm\visas-checklist.pdf" />
+    <Content Include="AddVisaForm\visas-checklist1.pdf" />
+    <Content Include="AddVisaForm\VISIT.pdf" />
+    <Content Include="AddVisaForm\VISITORVISACHECKLIST.doc" />
+    <Content Include="AddVisaForm\Waiver-Declaration.pdf" />
+    <Content Include="AddVisaForm\WITHDRAWL-LETTER.pdf" />
+    <Content Include="AddVisaForm\WOR-old.pdf" />
+    <Content Include="AddVisaForm\WOR.pdf" />
+    <Content Include="AddVisaForm\work-visa.doc" />
+    <Content Include="AddVisaForm\workpermit-24apr2009.pdf" />
+    <Content Include="AddVisaForm\workpermit.pdf" />
+    <Content Include="AddVisaForm\WORKVISACHECKLIST.doc" />
+    <Content Include="AddVisaForm\work_visa_chklst.pdf" />
+    <Content Include="AddVisaForm\WORK_VISA_PERMIT_FORM_INZ1015.pdf" />
+    <Content Include="AddVisaForm\Yamen.pdf" />
+    <Content Include="AddVisaForm\Yugoslavia_all.pdf" />
+    <Content Include="AddVisaForm\Yugoslavia_all1.pdf" />
+    <Content Include="AddVisaForm\Yugoslavia_all_2june2010.pdf" />
+    <Content Include="AddVisaForm\YUGOSLAVIA_Sponsorship_busi.pdf" />
+    <Content Include="AddVisaForm\YUGOSLAVIA_Sponsorship_busi_New.pdf" />
+    <Content Include="AddVisaForm\YUGOSLAVIA_Sponsorship_tour.pdf" />
+    <Content Include="AddVisaForm\Zambia.pdf" />
+    <Content Include="AddVisaForm\Zambia.pdf old-20-02-2012" />
+    <Content Include="AddVisaForm\Zambia_New.pdf" />
+    <Content Include="AddVisaForm\zimbabwe.pdf" />
+    <Content Include="AddVisaForm\bangalore\ApplicationFormJapan.pdf" />
+    <Content Include="AddVisaForm\bangalore\ApplicationFormJapan_22march.pdf" />
+    <Content Include="AddVisaForm\bangalore\EmploymentVisaFrance.pdf" />
+    <Content Include="AddVisaForm\bangalore\FRANCE.pdf" />
+    <Content Include="AddVisaForm\bangalore\FranceBusinessTouristVisaChecklist.pdf" />
+    <Content Include="AddVisaForm\bangalore\FranceForm.pdf" />
+    <Content Include="AddVisaForm\bangalore\FranceForm_1.pdf" />
+    <Content Include="AddVisaForm\bangalore\FRANCE_AUTHORITY_LETTER.doc" />
+    <Content Include="AddVisaForm\bangalore\FRANCE_DECLARATION__10MAY.pdf" />
+    <Content Include="AddVisaForm\bangalore\GERMANY_AUTHORITY_LETTER.doc" />
+    <Content Include="AddVisaForm\bangalore\Italy_Authority_Letter.doc" />
+    <Content Include="AddVisaForm\bangalore\LetterofGuaranteeFormatforJapanVisa.pdf" />
+    <Content Include="AddVisaForm\bangalore\LetterofInvitationforMultipleApplicants.pdf" />
+    <Content Include="AddVisaForm\bangalore\LetterofReasonInvitationJapan.pdf" />
+    <Content Include="AddVisaForm\bangalore\Luxembourg.pdf" />
+    <Content Include="AddVisaForm\bangalore\Netherlands_Authority_Letter.doc" />
+    <Content Include="AddVisaForm\bangalore\PhotoSpecification.pdf" />
+    <Content Include="AddVisaForm\chennai\CompanyDetail.pdf" />
+    <Content Include="AddVisaForm\chennai\DeclarationonTravelHealthInsurance.pdf" />
+    <Content Include="AddVisaForm\chennai\DeclarationonTravelHealthInsuranceNew.pdf" />
+    <Content Include="AddVisaForm\chennai\DeclarationonTrueandCompleteInformation.pdf" />
+    <Content Include="AddVisaForm\chennai\DeclarationonTrueandCompleteInformationNew.pdf" />
+    <Content Include="AddVisaForm\chennai\GERMANY-MDS4GermanPowerofAttorney.pdf" />
+    <Content Include="AddVisaForm\chennai\Japannewapplicationform.pdf" />
+    <Content Include="AddVisaForm\chennai\letterofGuarantee.pdf" />
+    <Content Include="AddVisaForm\chennai\letterofreasonforinvitation.pdf" />
+    <Content Include="AddVisaForm\chennai\Luxembourg.pdf" />
+    <Content Include="AddVisaForm\chennai\malaysia.pdf" />
+    <Content Include="AddVisaForm\chennai\MALAYSIAVISAFORM_11_03_2013.pdf" />
+    <Content Include="AddVisaForm\chennai\malaysia_form.pdf" />
+    <Content Include="AddVisaForm\chennai\Phillippines chennai visa form.pdf" />
+    <Content Include="AddVisaForm\chennai\PhotoSpecification.pdf" />
+    <Content Include="AddVisaForm\chennai\scheduleofstayinjapan.pdf" />
+    <Content Include="AddVisaForm\chennai\SINGAPOREVISAFORM.pdf" />
+    <Content Include="AddVisaForm\chennai\SRILANKAFORM.pdf" />
+    <Content Include="AddVisaForm\chennai\TouristVisaChecklist.pdf" />
+    <Content Include="AddVisaForm\chennai\VisaFormGermany.pdf" />
+    <Content Include="AddVisaForm\mumbai\argentina.pdf" />
+    <Content Include="AddVisaForm\mumbai\AUTHORITY-LETTER-FOR-POLAND-MUM.DOCX" />
+    <Content Include="AddVisaForm\mumbai\AUTHORITY-LETTER-FOR-POLAND-MUM.pdf" />
+    <Content Include="AddVisaForm\mumbai\AuthorizationForm.pdf" />
+    <Content Include="AddVisaForm\mumbai\belgium-12-12-2011.pdf" />
+    <Content Include="AddVisaForm\mumbai\belgium.pdf" />
+    <Content Include="AddVisaForm\mumbai\canada.PDF" />
+    <Content Include="AddVisaForm\mumbai\china.pdf" />
+    <Content Include="AddVisaForm\mumbai\consent.pdf" />
+    <Content Include="AddVisaForm\mumbai\coverig letter format for spain.pdf" />
+    <Content Include="AddVisaForm\mumbai\DeclarationForm-01.11.2011.pdf" />
+    <Content Include="AddVisaForm\mumbai\DeclarationForm.pdf" />
+    <Content Include="AddVisaForm\mumbai\egypt-09-12-2011.pdf" />
+    <Content Include="AddVisaForm\mumbai\egypt-12-12-2011.pdf" />
+    <Content Include="AddVisaForm\mumbai\egypt.pdf" />
+    <Content Include="AddVisaForm\mumbai\form2.pdf" />
+    <Content Include="AddVisaForm\mumbai\france-old.pdf" />
+    <Content Include="AddVisaForm\mumbai\FRANCE.pdf" />
+    <Content Include="AddVisaForm\mumbai\FRANCE_DECLARATION__10MAY.pdf" />
+    <Content Include="AddVisaForm\mumbai\indonesia-12-12-2011.pdf" />
+    <Content Include="AddVisaForm\mumbai\indonesia.pdf" />
+    <Content Include="AddVisaForm\mumbai\indonesia09-12-2011.pdf" />
+    <Content Include="AddVisaForm\mumbai\iran.pdf" />
+    <Content Include="AddVisaForm\mumbai\ireland.pdf" />
+    <Content Include="AddVisaForm\mumbai\Israel - Business %28checklist%29.pdf" />
+    <Content Include="AddVisaForm\mumbai\Israel - Tourist %28checklist%29.pdf" />
+    <Content Include="AddVisaForm\mumbai\israel.pdf" />
+    <Content Include="AddVisaForm\mumbai\italy-12-12-2011.pdf" />
+    <Content Include="AddVisaForm\mumbai\italy.pdf" />
+    <Content Include="AddVisaForm\mumbai\japan.pdf" />
+    <Content Include="AddVisaForm\mumbai\LONG-TERM-VISA-FORM-NEW.pdf" />
+    <Content Include="AddVisaForm\mumbai\LONG-TERM-VISA-FORM.pdf" />
+    <Content Include="AddVisaForm\mumbai\LongtermPLNewVisaApplicationform.pdf" />
+    <Content Include="AddVisaForm\mumbai\Luxembourg.pdf" />
+    <Content Include="AddVisaForm\mumbai\netherlands-12-12-2011.pdf" />
+    <Content Include="AddVisaForm\mumbai\netherlands.pdf" />
+    <Content Include="AddVisaForm\mumbai\netherland_travelhistory_details.pdf" />
+    <Content Include="AddVisaForm\mumbai\NewVisaApplicationFormVisa C.pdf" />
+    <Content Include="AddVisaForm\mumbai\NewVisaApplicationFormVisaC.pdf" />
+    <Content Include="AddVisaForm\mumbai\Personalinformation.PDF" />
+    <Content Include="AddVisaForm\mumbai\philippines.pdf" />
+    <Content Include="AddVisaForm\mumbai\philippines_visaform.pdf" />
+    <Content Include="AddVisaForm\mumbai\SchengenVisaform.pdf" />
+    <Content Include="AddVisaForm\mumbai\SHORT-TERM-VISA-FORM-12-12-2011.pdf" />
+    <Content Include="AddVisaForm\mumbai\SHORT-TERM-VISA-FORM-NEW.pdf" />
+    <Content Include="AddVisaForm\mumbai\SHORT-TERM-VISA-FORM.pdf" />
+    <Content Include="AddVisaForm\mumbai\ShortStay-EN.pdf" />
+    <Content Include="AddVisaForm\mumbai\ShortStay-EN_Old.pdf" />
+    <Content Include="AddVisaForm\mumbai\singapore-mumbai.pdf" />
+    <Content Include="AddVisaForm\mumbai\singapore.pdf" />
+    <Content Include="AddVisaForm\mumbai\south-korea.pdf" />
+    <Content Include="AddVisaForm\mumbai\south-korea_18nov2010.pdf" />
+    <Content Include="AddVisaForm\mumbai\southfrica.pdf" />
+    <Content Include="AddVisaForm\mumbai\SPAIN Authorization_Form_Mumbai_251111.pdf" />
+    <Content Include="AddVisaForm\mumbai\Spain-checklist_161113 %281%29.pdf" />
+    <Content Include="AddVisaForm\mumbai\SPAINLETTER.pdf" />
+    <Content Include="AddVisaForm\mumbai\SPAIN_NEW.pdf" />
+    <Content Include="AddVisaForm\mumbai\turkey_visa.pdf" />
+    <Content Include="AddVisaForm\mumbai\vietnam.pdf" />
+    <Content Include="AddVisaForm\mumbai\visaapplicationformforaSchengenvisaedf.pdf" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="FileUploads\senki kumar singh.doc" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <None Include="fonts\iconFont.eot" />
+    <None Include="fonts\iconFont.svg" />
+    <None Include="fonts\iconFont.ttf" />
+    <None Include="fonts\iconFont.woff" />
+    <Content Include="AddVisaForm\Hwllo.docx" />
+    <Content Include="AddVisaForm\localhost_53354_PreviewPrintInvoice %281%29.pdf" />
+    <Content Include="AddVisaForm\localhost_53354_PreviewPrintInvoice.pdf" />
+    <Content Include="AddVisaForm\SLF02A024010043034.pdf" />
+    <Content Include="AddVisaForm\transport-form.pdf" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Debug\ResolveAssemblyReference.cache" />
+    <Content Include="packages.config" />
+    <None Include="Properties\PublishProfiles\JetSave.pubxml" />
+    <None Include="Properties\PublishProfiles\JetsaveNewPublish.pubxml" />
+    <None Include="Properties\PublishProfiles\JetsavePublish.pubxml" />
+    <None Include="Properties\PublishProfiles\JetSave_Publish.pubxml" />
+    <None Include="Properties\PublishProfiles\Profile1.pubxml" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <SaveServerSettingsInUserFile>True</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

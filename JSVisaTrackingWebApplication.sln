@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JSVisaTrackingWebApplication", "JSVisaTrackingWebApplication\JSVisaTrackingWebApplication.csproj", "{9AAA5A6C-EBA9-47D8-A09E-E2CF732009E7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessAccessLayer", "BusinessAccessLayer\BusinessAccessLayer.csproj", "{8EE904F2-EC9D-4749-963A-7D9B734B449A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessLayer", "DataAccessLayer\DataAccessLayer.csproj", "{EC60118C-AD3C-480F-A07E-848D45269437}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DomianObjectModel", "DomianObjectModel\DomianObjectModel.csproj", "{662FEE30-198E-4EF3-9B77-7C1BEABE6AD6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9AAA5A6C-EBA9-47D8-A09E-E2CF732009E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9AAA5A6C-EBA9-47D8-A09E-E2CF732009E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9AAA5A6C-EBA9-47D8-A09E-E2CF732009E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9AAA5A6C-EBA9-47D8-A09E-E2CF732009E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8EE904F2-EC9D-4749-963A-7D9B734B449A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8EE904F2-EC9D-4749-963A-7D9B734B449A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8EE904F2-EC9D-4749-963A-7D9B734B449A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8EE904F2-EC9D-4749-963A-7D9B734B449A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC60118C-AD3C-480F-A07E-848D45269437}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC60118C-AD3C-480F-A07E-848D45269437}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC60118C-AD3C-480F-A07E-848D45269437}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC60118C-AD3C-480F-A07E-848D45269437}.Release|Any CPU.Build.0 = Release|Any CPU
+		{662FEE30-198E-4EF3-9B77-7C1BEABE6AD6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{662FEE30-198E-4EF3-9B77-7C1BEABE6AD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{662FEE30-198E-4EF3-9B77-7C1BEABE6AD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{662FEE30-198E-4EF3-9B77-7C1BEABE6AD6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
